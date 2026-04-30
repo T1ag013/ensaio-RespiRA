@@ -1,11 +1,29 @@
 ---
-title: "ensaio-RespiRA"
+title: "Início"
 ---
 
-This is a Quarto website.
+## Sobre o Estudo
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+RespiRA: Eficácia de uma Aplicação Móvel de Monitorização e Gestão da Asma Moderada Persistente em Adultos Seguidos nos Cuidados de Saúde Primários
 
-```{r}
-1 + 1
-```
+Estudo Piloto Randomizado e Controlado com 12 Semanas de Follow-up
+
+## Introdução
+
+A asma é uma doença respiratória crónica de elevada prevalência a nível mundial, afetando cerca de 300 milhões de pessoas, com impacto significativo na qualidade de vida, produtividade e utilização de recursos de saúde. Em Portugal, estima-se que aproximadamente 10% da população adulta sofra de asma, sendo a asma moderada persistente uma das formas clínicas que maior desafio representa para os cuidados de saúde primários.
+
+Apesar dos avanços terapêuticos disponíveis, um número considerável de doentes mantém um controlo subótimo da doença, frequentemente associado a dificuldades na adesão à medicação, desconhecimento do plano de ação individualizado e ausência de monitorização sistemática dos sintomas entre consultas.
+
+O presente estudo piloto justifica-se pela necessidade de gerar evidência preliminar sobre a viabilidade e eficácia da app RespiRA em adultos com asma moderada persistente seguidos em unidades de saúde familiar (USF) portuguesas.
+
+## Identificação do Ensaio
+
+**Tipo de estudo:** Ensaio clínico randomizado, controlado, paralelo
+
+**Data de início prevista:** 06/03/2026
+
+**Data de conclusão prevista:** 06/03/2027
+
+**Tamanho da amostra:** 30 participantes (15 por braço)
+
+**Duração:** 12 semanas
