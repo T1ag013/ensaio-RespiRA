@@ -33,5 +33,47 @@
     "title": "Início",
     "section": "Identificação do Ensaio",
     "text": "Identificação do Ensaio\nTipo de estudo: Ensaio clínico randomizado, controlado, paralelo\nData de início prevista: 06/03/2026\nData de conclusão prevista: 06/03/2027\nTamanho da amostra: 30 participantes (15 por braço)\nDuração: 12 semanas"
+  },
+  {
+    "objectID": "protocolo.html",
+    "href": "protocolo.html",
+    "title": "Protocolo",
+    "section": "",
+    "text": "Ensaio clínico randomizado, controlado, de grupos paralelos, com randomização 1:1, durante 12 semanas, numa Unidade de Saúde Familiar (USF).\nTipo de estudo: Ensaio clínico randomizado, controlado, paralelo\nRandomização: 1:1 (intervenção : controlo)\nDuração: 12 semanas\nSetting: 1 Unidade de Saúde Familiar (USF)\nTamanho da amostra: 30 participantes (15 por braço)"
+  },
+  {
+    "objectID": "protocolo.html#desenho-do-estudo",
+    "href": "protocolo.html#desenho-do-estudo",
+    "title": "Protocolo",
+    "section": "",
+    "text": "Ensaio clínico randomizado, controlado, de grupos paralelos, com randomização 1:1, durante 12 semanas, numa Unidade de Saúde Familiar (USF).\nTipo de estudo: Ensaio clínico randomizado, controlado, paralelo\nRandomização: 1:1 (intervenção : controlo)\nDuração: 12 semanas\nSetting: 1 Unidade de Saúde Familiar (USF)\nTamanho da amostra: 30 participantes (15 por braço)"
+  },
+  {
+    "objectID": "protocolo.html#critérios-de-inclusão",
+    "href": "protocolo.html#critérios-de-inclusão",
+    "title": "Protocolo",
+    "section": "Critérios de Inclusão",
+    "text": "Critérios de Inclusão\nSerão elegíveis indivíduos que cumpram todos os seguintes critérios:\n\nIdade entre 18 e 65 anos à data de recrutamento\nDiagnóstico de asma moderada persistente confirmado pelos critérios GINA, documentado há pelo menos 6 meses\nACT score entre 12 e 19 pontos e peak flow entre 60-80% do valor previsto, sem hospitalização nos 3 meses anteriores\nPosse e utilização autónoma de smartphone Android (≥8.0) ou iOS (≥13) com acesso a internet\nCapacidade de ler e compreender informação escrita em português europeu\nCapacidade para fornecer consentimento informado escrito\nDisponibilidade para participar durante 12 semanas"
+  },
+  {
+    "objectID": "protocolo.html#critérios-de-exclusão",
+    "href": "protocolo.html#critérios-de-exclusão",
+    "title": "Protocolo",
+    "section": "Critérios de Exclusão",
+    "text": "Critérios de Exclusão\nSerão excluídos indivíduos que apresentem qualquer dos seguintes critérios:\n\nDiagnóstico de DPOC, fibrose quística ou outra doença respiratória crónica grave\nParticipação simultânea noutro ensaio clínico ou estudo intervencionista\nGravidez confirmada ou amamentação à data de recrutamento\nIncapacidade física ou cognitiva de realizar corretamente a medição de peak flow ou preencher o ACT\nAusência de smartphone compatível ou sem acesso regular a internet\nQualquer condição clínica, psiquiátrica ou social que comprometa a segurança do participante ou a validade dos dados"
+  },
+  {
+    "objectID": "protocolo.html#recrutamento",
+    "href": "protocolo.html#recrutamento",
+    "title": "Protocolo",
+    "section": "Recrutamento",
+    "text": "Recrutamento\nO recrutamento será realizado na USF participante através de duas vias:\nIdentificação ativa: o médico de família identifica, na sua lista de utentes, pacientes com diagnóstico de asma moderada persistente registado no processo clínico eletrónico.\nRecrutamento em consulta: durante consultas programadas de vigilância ou de doença crónica.\nOs candidatos receberão informação escrita sobre o estudo e terão um período mínimo de 48 horas para decidir a sua participação antes de assinar o consentimento informado."
+  },
+  {
+    "objectID": "protocolo.html#ética-e-disseminação",
+    "href": "protocolo.html#ética-e-disseminação",
+    "title": "Protocolo",
+    "section": "Ética e Disseminação",
+    "text": "Ética e Disseminação\nO protocolo será submetido para aprovação pela Comissão de Ética para a Saúde (CES). O estudo cumprirá a Declaração de Helsínquia e as Boas Práticas Clínicas (GCP).\nA recolha e armazenamento dos dados respeitarão o Regulamento Geral sobre a Proteção de Dados (RGPD), com pseudonimização dos participantes através de código único.\nOs resultados serão submetidos para publicação em revistas científicas com revisão por pares e apresentados em congressos médicos, independentemente da direção dos resultados."
   }
 ]
