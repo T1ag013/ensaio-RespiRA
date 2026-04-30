@@ -2,9 +2,30 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "ensaio-RespiRA",
+    "title": "Início",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+    "text": "RespiRA: Eficácia de uma Aplicação Móvel de Monitorização e Gestão da Asma Moderada Persistente em Adultos Seguidos nos Cuidados de Saúde Primários\nEstudo Piloto Randomizado e Controlado com 12 Semanas de Follow-up"
+  },
+  {
+    "objectID": "index.html#sobre-o-estudo",
+    "href": "index.html#sobre-o-estudo",
+    "title": "Início",
+    "section": "",
+    "text": "RespiRA: Eficácia de uma Aplicação Móvel de Monitorização e Gestão da Asma Moderada Persistente em Adultos Seguidos nos Cuidados de Saúde Primários\nEstudo Piloto Randomizado e Controlado com 12 Semanas de Follow-up"
+  },
+  {
+    "objectID": "index.html#introdução",
+    "href": "index.html#introdução",
+    "title": "Início",
+    "section": "Introdução",
+    "text": "Introdução\nA asma é uma doença respiratória crónica de elevada prevalência a nível mundial, afetando cerca de 300 milhões de pessoas, com impacto significativo na qualidade de vida, produtividade e utilização de recursos de saúde. Em Portugal, estima-se que aproximadamente 10% da população adulta sofra de asma, sendo a asma moderada persistente uma das formas clínicas que maior desafio representa para os cuidados de saúde primários.\nApesar dos avanços terapêuticos disponíveis, um número considerável de doentes mantém um controlo subótimo da doença, frequentemente associado a dificuldades na adesão à medicação, desconhecimento do plano de ação individualizado e ausência de monitorização sistemática dos sintomas entre consultas.\nO presente estudo piloto justifica-se pela necessidade de gerar evidência preliminar sobre a viabilidade e eficácia da app RespiRA em adultos com asma moderada persistente seguidos em unidades de saúde familiar (USF) portuguesas."
+  },
+  {
+    "objectID": "index.html#identificação-do-ensaio",
+    "href": "index.html#identificação-do-ensaio",
+    "title": "Início",
+    "section": "Identificação do Ensaio",
+    "text": "Identificação do Ensaio\nTipo de estudo: Ensaio clínico randomizado, controlado, paralelo\nData de início prevista: 06/03/2026\nData de conclusão prevista: 06/03/2027\nTamanho da amostra: 30 participantes (15 por braço)\nDuração: 12 semanas"
   },
   {
     "objectID": "about.html",
