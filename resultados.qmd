@@ -16,12 +16,12 @@ O Asthma Control Test (ACT) é um questionário validado, auto-administrado, com
 
 ## Outcomes Secundários
 
-1.  **Valores de Peak Flow (PEF)** — Avaliação da média e variabilidade diária do PEF ao longo das 12 semanas
-2.  **Taxa de Exacerbações** — Número de exacerbações de asma documentadas durante o período de 12 semanas
-3.  **Taxa de Adesão à Medicação** — Percentagem de doses tomadas face às prescritas, avaliada aos 4, 8 e 12 semanas
-4.  **Qualidade de Vida (AQLQ)** — Aplicado na linha de base e às 12 semanas
-5.  **Recurso a Cuidados Não Programados** — Número de idas ao serviço de urgência motivadas por agravamento da asma
-6.  **Satisfação com os Cuidados de Saúde** — Avaliado através de questionário padronizado no final da intervenção
+1.  **Valores de Peak Flow (PEF):** Avaliação da média e variabilidade diária do PEF ao longo das 12 semanas
+2.  **Taxa de Exacerbações:** Número de exacerbações de asma documentadas durante o período de 12 semanas
+3.  **Taxa de Adesão à Medicação:** Percentagem de doses tomadas face às prescritas, avaliada aos 4, 8 e 12 semanas
+4.  **Qualidade de Vida (AQLQ):** Aplicado na linha de base e às 12 semanas
+5.  **Recurso a Cuidados Não Programados:** Número de idas ao serviço de urgência motivadas por agravamento da asma
+6.  **Satisfação com os Cuidados de Saúde:** Avaliado através de questionário padronizado no final da intervenção
 
 ## Análise Estatística
 
