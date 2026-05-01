@@ -1,9 +1,6 @@
 ---
 title: "Protocolo"
 ---
----
-title: "Protocolo"
----
 
 ## Desenho do Estudo
 

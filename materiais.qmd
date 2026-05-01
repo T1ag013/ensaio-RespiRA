@@ -1,4 +1,64 @@
 ---
-title: "Untitled"
-format: revealjs
+title: "Materiais"
 ---
+
+## Grupo de Intervenção — Aplicação RespiRA
+
+Os participantes randomizados para o grupo de intervenção receberão a aplicação RespiRA no momento da avaliação basal (T0), acompanhada de uma sessão de formação de aproximadamente 15 minutos.
+
+## Funcionalidades Principais
+
+**Monitorização de sintomas (ACT)**
+
+Apresenta o questionário ACT com 5 perguntas sobre controlo da asma. Frequência semanal com notificação ao domingo.
+
+**Registo de peak flow**
+
+Permite a introdução manual dos valores, gerando gráficos de evolução e avisos caso o valor desça abaixo de 60% do previsto. Frequência diária, preferencialmente de manhã.
+
+**Lembretes de medicação**
+
+Envia notificações push nos horários definidos para cada medicamento prescrito, com opção de confirmar ou adiar a toma.
+
+**Plano de ação e Educação**
+
+Sugestões de ações baseadas nas guidelines GINA e módulos informativos sobre asma.
+
+## Instalação e Onboarding
+
+O processo de onboarding decorre na consulta basal (T0) e inclui:
+
+1.  Instalação assistida por um elemento da equipa de investigação
+2.  Configuração inicial com dados clínicos base (medicação, horários, valor de peak flow previsto)
+3.  Tutorial guiado de aproximadamente 10 minutos
+4.  Esclarecimento de dúvidas com a equipa
+
+Será disponibilizado um guia de utilização em papel como suporte adicional.
+
+## Suporte Técnico
+
+Os participantes terão acesso a suporte técnico durante todo o período do estudo:
+
+**Linha de apoio telefónico** — disponível de segunda a sexta, das 9h às 17h
+
+**Email de suporte** — para questões não urgentes, com resposta garantida em até 48 horas úteis
+
+**FAQ integrado na app** — secção de perguntas frequentes acessível diretamente na aplicação
+
+## Grupo Controlo
+
+Os participantes randomizados para o grupo controlo receberão cuidado habitual isolado, sem acesso à aplicação RespiRA. O cuidado habitual inclui:
+
+1.  Consultas médicas programadas
+2.  Acesso à medicação prescrita sem alteração do esquema
+3.  Material educativo standard do centro de saúde
+
+Após o término do ensaio, será ponderado o acesso à aplicação como medida de equidade.
+
+## Critérios de Descontinuação
+
+Participantes serão retirados do estudo se:
+
+1.  Retirarem o consentimento informado em qualquer momento
+2.  Desenvolverem uma condição clínica que torne a continuação insegura
+3.  Ocorrer violação grave do protocolo que comprometa a integridade dos dados

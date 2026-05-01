@@ -1,5 +1,54 @@
 [
   {
+    "objectID": "materiais.html",
+    "href": "materiais.html",
+    "title": "Materiais",
+    "section": "",
+    "text": "Os participantes randomizados para o grupo de intervenção receberão a aplicação RespiRA no momento da avaliação basal (T0), acompanhada de uma sessão de formação de aproximadamente 15 minutos."
+  },
+  {
+    "objectID": "materiais.html#grupo-de-intervenção-aplicação-respira",
+    "href": "materiais.html#grupo-de-intervenção-aplicação-respira",
+    "title": "Materiais",
+    "section": "",
+    "text": "Os participantes randomizados para o grupo de intervenção receberão a aplicação RespiRA no momento da avaliação basal (T0), acompanhada de uma sessão de formação de aproximadamente 15 minutos."
+  },
+  {
+    "objectID": "materiais.html#funcionalidades-principais",
+    "href": "materiais.html#funcionalidades-principais",
+    "title": "Materiais",
+    "section": "Funcionalidades Principais",
+    "text": "Funcionalidades Principais\nMonitorização de sintomas (ACT)\nApresenta o questionário ACT com 5 perguntas sobre controlo da asma. Frequência semanal com notificação ao domingo.\nRegisto de peak flow\nPermite a introdução manual dos valores, gerando gráficos de evolução e avisos caso o valor desça abaixo de 60% do previsto. Frequência diária, preferencialmente de manhã.\nLembretes de medicação\nEnvia notificações push nos horários definidos para cada medicamento prescrito, com opção de confirmar ou adiar a toma.\nPlano de ação e Educação\nSugestões de ações baseadas nas guidelines GINA e módulos informativos sobre asma."
+  },
+  {
+    "objectID": "materiais.html#instalação-e-onboarding",
+    "href": "materiais.html#instalação-e-onboarding",
+    "title": "Materiais",
+    "section": "Instalação e Onboarding",
+    "text": "Instalação e Onboarding\nO processo de onboarding decorre na consulta basal (T0) e inclui:\n\nInstalação assistida por um elemento da equipa de investigação\nConfiguração inicial com dados clínicos base (medicação, horários, valor de peak flow previsto)\nTutorial guiado de aproximadamente 10 minutos\nEsclarecimento de dúvidas com a equipa\n\nSerá disponibilizado um guia de utilização em papel como suporte adicional."
+  },
+  {
+    "objectID": "materiais.html#suporte-técnico",
+    "href": "materiais.html#suporte-técnico",
+    "title": "Materiais",
+    "section": "Suporte Técnico",
+    "text": "Suporte Técnico\nOs participantes terão acesso a suporte técnico durante todo o período do estudo:\nLinha de apoio telefónico — disponível de segunda a sexta, das 9h às 17h\nEmail de suporte — para questões não urgentes, com resposta garantida em até 48 horas úteis\nFAQ integrado na app — secção de perguntas frequentes acessível diretamente na aplicação"
+  },
+  {
+    "objectID": "materiais.html#grupo-controlo",
+    "href": "materiais.html#grupo-controlo",
+    "title": "Materiais",
+    "section": "Grupo Controlo",
+    "text": "Grupo Controlo\nOs participantes randomizados para o grupo controlo receberão cuidado habitual isolado, sem acesso à aplicação RespiRA. O cuidado habitual inclui:\n\nConsultas médicas programadas\nAcesso à medicação prescrita sem alteração do esquema\nMaterial educativo standard do centro de saúde\n\nApós o término do ensaio, será ponderado o acesso à aplicação como medida de equidade."
+  },
+  {
+    "objectID": "materiais.html#critérios-de-descontinuação",
+    "href": "materiais.html#critérios-de-descontinuação",
+    "title": "Materiais",
+    "section": "Critérios de Descontinuação",
+    "text": "Critérios de Descontinuação\nParticipantes serão retirados do estudo se:\n\nRetirarem o consentimento informado em qualquer momento\nDesenvolverem uma condição clínica que torne a continuação insegura\nOcorrer violação grave do protocolo que comprometa a integridade dos dados"
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
