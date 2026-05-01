@@ -124,5 +124,33 @@
     "title": "About",
     "section": "",
     "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "resultados.html",
+    "href": "resultados.html",
+    "title": "Resultados",
+    "section": "",
+    "text": "Pontuação do Asthma Control Test (ACT)\nO Asthma Control Test (ACT) é um questionário validado, auto-administrado, composto por 5 perguntas que avaliam o controlo da asma nas últimas 4 semanas. A pontuação varia entre 5 (controlo muito mau) e 25 (controlo total).\nMomento de avaliação: Baseline (semana 0) e follow-up às 4, 8 e 12 semanas\nEndpoint primário final: Avaliação às 12 semanas\nDefinição de sucesso: Diferença estatisticamente significativa na variação da pontuação média do ACT entre grupos às 12 semanas, ou ACT ≥ 20 no grupo de intervenção, ou aumento ≥ 3 pontos face à linha de base"
+  },
+  {
+    "objectID": "resultados.html#outcome-primário",
+    "href": "resultados.html#outcome-primário",
+    "title": "Resultados",
+    "section": "",
+    "text": "Pontuação do Asthma Control Test (ACT)\nO Asthma Control Test (ACT) é um questionário validado, auto-administrado, composto por 5 perguntas que avaliam o controlo da asma nas últimas 4 semanas. A pontuação varia entre 5 (controlo muito mau) e 25 (controlo total).\nMomento de avaliação: Baseline (semana 0) e follow-up às 4, 8 e 12 semanas\nEndpoint primário final: Avaliação às 12 semanas\nDefinição de sucesso: Diferença estatisticamente significativa na variação da pontuação média do ACT entre grupos às 12 semanas, ou ACT ≥ 20 no grupo de intervenção, ou aumento ≥ 3 pontos face à linha de base"
+  },
+  {
+    "objectID": "resultados.html#outcomes-secundários",
+    "href": "resultados.html#outcomes-secundários",
+    "title": "Resultados",
+    "section": "Outcomes Secundários",
+    "text": "Outcomes Secundários\n\nValores de Peak Flow (PEF): Avaliação da média e variabilidade diária do PEF ao longo das 12 semanas\nTaxa de Exacerbações: Número de exacerbações de asma documentadas durante o período de 12 semanas\nTaxa de Adesão à Medicação: Percentagem de doses tomadas face às prescritas, avaliada aos 4, 8 e 12 semanas\nQualidade de Vida (AQLQ): Aplicado na linha de base e às 12 semanas\nRecurso a Cuidados Não Programados: Número de idas ao serviço de urgência motivadas por agravamento da asma\nSatisfação com os Cuidados de Saúde: Avaliado através de questionário padronizado no final da intervenção"
+  },
+  {
+    "objectID": "resultados.html#análise-estatística",
+    "href": "resultados.html#análise-estatística",
+    "title": "Resultados",
+    "section": "Análise Estatística",
+    "text": "Análise Estatística\nA análise será essencialmente exploratória e descritiva, focada na estimação da magnitude do efeito e nos respetivos intervalos de confiança.\nNível de significância: α = 0,05 (bicaudal)\nSoftware: R (versão ≥ 4.0)\nOutcome primário e secundários: Teste t de Student para amostras independentes ou Teste U de Mann-Whitney\nMedidas repetidas: Modelo Linear de Efeitos Mistos (LMM)\nTaxa de adesão: Teste Qui-Quadrado de Pearson ou Teste Exato de Fisher\nPopulação de análise: Intention-to-Treat (ITT), com análise Per-Protocol (PP) de sensibilidade"
   }
 ]
