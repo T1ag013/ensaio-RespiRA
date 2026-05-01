@@ -2,7 +2,7 @@
 title: "Materiais"
 ---
 
-## Grupo de Intervenção — Aplicação RespiRA
+## Grupo de Intervenção: Aplicação RespiRA
 
 Os participantes randomizados para o grupo de intervenção receberão a aplicação RespiRA no momento da avaliação basal (T0), acompanhada de uma sessão de formação de aproximadamente 15 minutos.
 
@@ -39,11 +39,11 @@ Será disponibilizado um guia de utilização em papel como suporte adicional.
 
 Os participantes terão acesso a suporte técnico durante todo o período do estudo:
 
-**Linha de apoio telefónico** — disponível de segunda a sexta, das 9h às 17h
+**Linha de apoio telefónico**: disponível de segunda a sexta, das 9h às 17h
 
-**Email de suporte** — para questões não urgentes, com resposta garantida em até 48 horas úteis
+**Email de suporte**: para questões não urgentes, com resposta garantida em até 48 horas úteis
 
-**FAQ integrado na app** — secção de perguntas frequentes acessível diretamente na aplicação
+**FAQ integrado na app**: secção de perguntas frequentes acessível diretamente na aplicação
 
 ## Grupo Controlo
 
