@@ -1,3 +1,34 @@
 ---
-title: "Untitled"
+title: "Equipa"
 ---
+
+## Investigadores Principais
+
+**Gonçalo Cunha**
+
+Estudante da Faculdade de Medicina da Universidade do Porto
+
+**João Cardoso**
+
+Estudante da Faculdade de Medicina da Universidade do Porto
+
+**Tiago Sousa**
+
+Estudante da Faculdade de Medicina da Universidade do Porto
+
+## Instituição
+
+Faculdade de Medicina da Universidade do Porto
+
+## Contacto
+
+Email: up202506406\@up.pt
+
+## Referências Bibliográficas
+
+1.  Global Initiative for Asthma (GINA). Global Strategy for Asthma Management and Prevention. (2023).
+2.  Chan AW, et al. SPIRIT 2013 statement: defining standard protocol items for clinical trials. Ann Intern Med. 2013.
+3.  Eldridge SM, et al. Defining feasibility and pilot studies in preparation for randomised controlled trials. PLoS One. 2016.
+4.  Hui CY, et al. The use of mobile applications to support self-management for people with asthma. J Am Med Inform Assoc. 2017.
+5.  Nathan RA, et al. Development of the asthma control test. J Allergy Clin Immunol. 2004.
+6.  Juniper EF, et al. Evaluation of impairment of health related quality of life in asthma. Thorax. 1992.
