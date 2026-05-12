@@ -1,0 +1,179 @@
+Códigos diagramas
+Consort
+flowchart TD
+ classDef box fill:#ffffff,stroke:#333333,stroke-width:2px,text-align:center;
+ classDef invis fill:none,stroke:none;
+ Screening["<b>Inscrição (Screening)</b><br/>Utentes avaliados para elegibilidade (n=
+)"]:::box
+ Excluidos["<b>Excluídos (n= )</b><br/>- Não cumprem critérios (n= )<br/>- Recusam
+participar (n= )<br/>- Outras razões (n= )"]:::box
+
+ Screening -->|Randomização| Random["<b>Randomizados (n= )</b>"]:::box
+ Screening -.-> Excluidos
+ Random -->|Alocação 1:1| GrupoInt["<b>Alocados ao Grupo Intervenção (n= )</b><br/>-
+App RespiRA + Cuidado Habitual"]:::box
+ Random -->|Alocação 1:1| GrupoCont["<b>Alocados ao Grupo Controlo (n= )</b><br/>-
+Apenas Cuidado Habitual"]:::box
+ GrupoInt --> FollowInt["<b>Follow-up Intermédio (Semanas 4 e 8)</b><br/>- Avaliação
+ACT (n= )"]:::box
+ GrupoCont --> FollowCont["<b>Follow-up Intermédio (Semanas 4 e 8)</b><br/>-
+Avaliação clínica padrão (n= )"]:::box
+ FollowInt --> FinalInt["<b>Follow-up Final (Semana 12)</b><br/>- Perdas de follow-up (n=
+)<br/>- Descontinuaram a intervenção (n= )"]:::box
+ FollowCont --> FinalCont["<b>Follow-up Final (Semana 12)</b><br/>- Perdas de follow-up
+(n= )"]:::box
+ FinalInt --> AnaliseInt["<b>Análise (n= )</b><br/>- Analisados por ITT (n= )"]:::box
+ FinalCont --> AnaliseCont["<b>Análise (n= )</b><br/>- Analisados por ITT (n= )"]:::box
+Diagrama atividade do participante do estudo
+flowchart TD
+ %% Estilos de formatação
+ classDef startEnd fill:#d9edf7,stroke:#31708f,stroke-width:2px,border-radius:10px,textalign:center;
+ classDef action fill:#ffffff,stroke:#333333,stroke-width:1px,text-align:center;
+ classDef decision fill:#fcf8e3,stroke:#8a6d3b,stroke-width:2px,shape:diamond,textalign:center;
+ classDef intervencao fill:#dff0d8,stroke:#3c763d,stroke-width:2px,text-align:center;
+ classDef controlo fill:#f2dede,stroke:#a94442,stroke-width:2px,text-align:center;
+ %% --- FASE DE ENTRADA ---
+ Start([<b>Início:</b><br/>Consulta no Centro de Saúde]):::startEnd --> A
+ A[Apresentação do Estudo pelo Médico]:::action --> B{Aceita<br/>Participar?}:::decision
+
+ B -- Não --> Fim1([<b>Fim:</b><br/>Mantém Cuidado Habitual]):::startEnd
+ B -- Sim (após 48h) --> C[Assinatura do Consentimento Informado]:::action
+
+ %% --- BASELINE ---
+ C --> D[Avaliação Baseline - Semana 0<br/>ACT, Peak Flow, AQLQ]:::action
+ D --> E{Randomização<br/>1:1}:::decision
+ %% --- GRUPO INTERVENÇÃO ---
+ E -- Grupo Intervenção --> F[<b>Onboarding:</b><br/>Instalação da App RespiRA e
+Formação]:::intervencao
+ F --> G[<b>Semanas 1 a 11:</b><br/>- Registo diário de Peak Flow<br/>- ACT
+semanal<br/>- Lembretes de medicação]:::intervencao
+
+ %% --- GRUPO CONTROLO ---
+ E -- Grupo Controlo --> H[<b>Cuidado Habitual:</b><br/>Sem acesso à App]:::controlo
+ H --> I[<b>Semanas 1 a 11:</b><br/>Mantém acompanhamento clínico padrão]:::controlo
+ %% --- FOLLOW-UP E FIM ---
+ G --> J[Avaliações Intermédias<br/>Semanas 4 e 8]:::action
+ I --> J
+
+ J --> K[<b>Avaliação Final - Semana 12</b><br/>ACT, Peak Flow, AQLQ,
+Satisfação]:::action
+ K --> L([<b>Fim da Participação</b><br/>Ponderação de acesso à App para o grupo
+controlo]):::startEnd
+Diagrama de atividade uso da APP
+flowchart TD
+ %% Estilos de formatação para as caixas
+ classDef startEnd fill:#d9edf7,stroke:#31708f,stroke-width:2px,border-radius:10px,textalign:center;
+ classDef rotina fill:#dff0d8,stroke:#3c763d,stroke-width:2px,text-align:center;
+ classDef decisao fill:#fcf8e3,stroke:#8a6d3b,stroke-width:2px,shape:diamond,textalign:center;
+ classDef alerta fill:#f2dede,stroke:#a94442,stroke-width:2px,text-align:center;
+ classDef acao fill:#ffffff,stroke:#333333,stroke-width:1px,text-align:center;
+ %% --- INÍCIO ---
+ Start([<b>Início da Jornada</b><br/>Abre a App RespiRA]):::startEnd --> Dash[Dashboard
+Principal]:::acao
+ %% --- DIVISÃO DA NAVEGAÇÃO ---
+ Dash --> Diaria[<b>Interação Diária</b>]:::rotina
+ Dash --> Semanal[<b>Interação Semanal</b><br/>(Domingo)]:::rotina
+ Dash --> Livre[<b>Navegação Livre</b>]:::acao
+ %% --- ROTINA DIÁRIA ---
+ Diaria --> Med[Notificação Push:<br/>Lembrete de Medicação]:::acao
+ Med --> MedReg(Confirma Toma / Adia)
+
+ Diaria --> Peak[Registo Matinal:<br/>Inserção do Peak Flow]:::acao
+ Peak --> AvaliaPF{Análise Automática<br/>do Valor Previsto}:::decisao
+ AvaliaPF -- "> 80%" --> Verde[<b>Zona Verde</b><br/>Registo Guardado com
+Sucesso]:::rotina
+ AvaliaPF -- "60% a 80%" --> Amarelo[<b>Zona Amarela</b><br/>Indício de
+Agravamento]:::alerta
+ AvaliaPF -- "< 60%" --> Vermelho[<b>Zona Vermelha</b><br/>Alerta de Risco
+Severo]:::alerta
+ %% --- ROTINA SEMANAL ---
+ Semanal --> ACT[Notificação Push:<br/>Preenchimento do ACT]:::acao
+ ACT --> ScoreACT{Cálculo Automático<br/>do Score}:::decisao
+
+ ScoreACT -- "Score >= 20" --> Verde
+ ScoreACT -- "Score < 20" --> Amarelo
+ %% --- PLANO DE AÇÃO E ALERTAS ---
+ Amarelo --> Plano[<b>Plano de Ação Personalizado</b><br/>Sugere ações baseadas
+nas<br/>guidelines GINA]:::alerta
+ Vermelho --> Plano
+ Plano --> NotificaDoc[Alerta Automático gerado<br/>Sugestão de contacto
+médico]:::alerta
+ %% --- NAVEGAÇÃO LIVRE ---
+ Livre --> Edu[Educação em Saúde:<br/>Técnica inalatória, gatilhos, etc.]:::acao
+ Livre --> Graf[Visualização de Gráficos:<br/>Histórico de sintomas e Peak Flow]:::acao
+Diagrama casos de uso
+flowchart LR
+ %% Definição de estilos para ficar com aspeto UML profissional
+ classDef actor fill:#f9f9f9,stroke:#333,stroke-width:2px,text-align:center,font-weight:bold;
+ classDef usecase fill:#e1f5fe,stroke:#0288d1,stroke-width:2px,border-radius:20px,textalign:center;
+ classDef system fill:#ffffff,stroke:#999,stroke-width:2px,stroke-dasharray: 5 5;
+ %% --- ATORES ---
+ Paciente[[" Paciente<br/>(Utilizador Principal)"]]:::actor
+ Medico[[" Médico<br/>(Acompanhamento)"]]:::actor
+ %% --- FRONTEIRA DO SISTEMA (APP) ---
+ subgraph Sistema [" Fronteira do Sistema: App RespiRA"]
+ direction TB
+ UC1(["Registar valor de Peak Flow"]):::usecase
+ UC2(["Preencher questionário ACT"]):::usecase
+ UC3(["Configurar lembretes de medicação"]):::usecase
+ UC4(["Registar/Confirmar toma da medicação"]):::usecase
+ UC5(["Consultar Plano de Ação Personalizado"]):::usecase
+ UC6(["Visualizar gráficos de evolução"]):::usecase
+ UC7(["Consultar módulos de Educação em Saúde"]):::usecase
+
+ %% Caso de uso do sistema (despoletado pelos registos)
+ UC8(["Gerar alertas de agravamento clínico"]):::usecase
+ end
+ class Sistema system
+ %% --- RELAÇÕES PACIENTE -> CASOS DE USO ---
+ Paciente --- UC1
+ Paciente --- UC2
+ Paciente --- UC3
+ Paciente --- UC4
+ Paciente --- UC5
+ Paciente --- UC6
+ Paciente --- UC7
+ %% --- RELAÇÕES DE DEPENDÊNCIA (INCLUDES/EXTENDS) ---
+ %% Os alertas são gerados automaticamente com base no Peak Flow ou ACT
+ UC1 -. "<< include >>" .-> UC8
+ UC2 -. "<< include >>" .-> UC8
+ %% --- RELAÇÕES ALERTAS -> ATORES ---
+ UC8 -. "<< notifica >>" .-> Paciente
+ UC8 -. "<< notifica (opcional) >>" .-> Medico
+Diagrama de sequência da funcionalidade
+sequenceDiagram
+ autonumber
+
+ %% Definição de Atores e Sistemas
+ actor P as Paciente
+ participant UI as App RespiRA (Interface)
+ participant S as Servidor / Motor de Regras
+ participant BD as Base de Dados
+ actor M as Médico
+ %% Início da Interação
+ P->>UI: Seleciona "Registar Peak Flow"
+ UI-->>P: Apresenta ecrã para inserção do valor
+ P->>UI: Insere valor medido e clica "Submeter"
+
+ %% Processamento
+ UI->>S: Envia dados (valor, data, hora)
+ S->>S: Compara valor inserido com o "Valor Previsto" do paciente
+
+ %% Gravação
+ S->>BD: Armazena o registo diário
+ BD-->>S: Confirmação de gravação
+
+ %% Lógica de Decisão (As 3 Zonas)
+ alt Valor >= 80% (Zona Verde)
+ S-->>UI: Retorna estado "Controlado"
+ UI-->>P: Mostra mensagem de sucesso e gráfico atualizado
+
+ else Valor entre 60% e 79% (Zona Amarela)
+ S-->>UI: Retorna estado "Alerta Moderado" + Plano de Ação
+ UI-->>P: Mostra notificação amarela e recomendações terapêuticas
+
+ else Valor < 60% (Zona Vermelha)
+ S-->>UI: Retorna estado "Alerta Severo" + Plano de Ação Crítico
+ S-)+M: Envia notificação / email de agravamento
+ UI-->>P: Mostra ecrã vermelho com instruções para procura de cuidados médicos
+ end
