@@ -16,4 +16,7 @@ website:
         text: Resultados
       - href: equipa.qmd
         text: Equipa
+      - href: ia.qmd
+        text: Declaração de IA
+        
 
