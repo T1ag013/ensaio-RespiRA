@@ -2,6 +2,31 @@
 title: "Protocolo"
 ---
 
+## Introdução
+
+### Racional
+
+A asma é uma doença respiratória crónica de elevada prevalência a nível mundial, afetando cerca de 300 milhões de pessoas, com impacto significativo na qualidade de vida, produtividade e utilização de recursos de saúde. Em Portugal, estima-se que aproximadamente 10% da população adulta sofra de asma, sendo a asma moderada persistente uma das formas clínicas que maior desafio representa para os cuidados de saúde primários.
+
+Apesar dos avanços terapêuticos disponíveis, um número considerável de doentes mantém um controlo subótimo da doença, frequentemente associado a dificuldades na adesão à medicação, desconhecimento do plano de ação individualizado e ausência de monitorização sistemática dos sintomas entre consultas.
+
+A evidência científica recente tem demonstrado o potencial das intervenções baseadas em tecnologias móveis na gestão de doenças crónicas. Contudo, a maioria dos estudos existentes apresenta limitações metodológicas e ausência de validação em contexto de cuidados de saúde primários europeus.
+
+O presente estudo piloto justifica-se pela necessidade de gerar evidência preliminar sobre a viabilidade e eficácia da app RespiRA em adultos com asma moderada persistente seguidos em unidades de saúde familiar (USF) portuguesas.
+
+### Objetivos
+
+**Objetivo Primário:** Avaliar a eficácia da aplicação RespiRA na melhoria do controlo da asma, medida pelo score do Asthma Control Test (ACT) após 12 semanas de intervenção.
+
+**Objetivos Secundários:**
+
+1. Analisar as variações nos valores de pico de fluxo expiratório (peak flow) ao longo do período de intervenção.
+2. Determinar a frequência de exacerbações asmáticas durante o estudo.
+3. Avaliar a taxa de adesão à medicação prescrita entre os dois grupos.
+4. Mensurar a qualidade de vida dos participantes através do AQLQ antes e após a intervenção.
+
+---
+
 ## Desenho do Estudo
 
 Ensaio clínico randomizado, controlado, de grupos paralelos, com randomização 1:1, durante 12 semanas, numa Unidade de Saúde Familiar (USF).
@@ -16,19 +41,36 @@ Ensaio clínico randomizado, controlado, de grupos paralelos, com randomização
 
 **Tamanho da amostra:** 30 participantes (15 por braço)
 
-## Critérios de Inclusão
+### Calendarização
+
+| Fase | Duração | Descrição |
+|------|---------|-----------|
+| Recrutamento | 2 semanas | Identificação e seleção de participantes |
+| Baseline | 1 dia | Avaliação inicial e randomização |
+| Intervenção | 8 semanas | Período ativo de intervenção |
+| Follow-up | 1 semana | Avaliações de outcome |
+
+### Fluxograma CONSORT
+
+![Fluxograma CONSORT](images/fluxograma.png)
+
+---
+
+## População do Estudo
+
+### Critérios de Inclusão
 
 Serão elegíveis indivíduos que cumpram **todos** os seguintes critérios:
 
 1. Idade entre 18 e 65 anos à data de recrutamento
 2. Diagnóstico de asma moderada persistente confirmado pelos critérios GINA, documentado há pelo menos 6 meses
 3. ACT score entre 12 e 19 pontos e peak flow entre 60-80% do valor previsto, sem hospitalização nos 3 meses anteriores
-4. Posse e utilização autónoma de smartphone Android (≥8.0) ou iOS (≥13) com acesso a internet
+4. Posse e utilização autónoma de smartphone Android (>=8.0) ou iOS (>=13) com acesso a internet
 5. Capacidade de ler e compreender informação escrita em português europeu
 6. Capacidade para fornecer consentimento informado escrito
 7. Disponibilidade para participar durante 12 semanas
 
-## Critérios de Exclusão
+### Critérios de Exclusão
 
 Serão excluídos indivíduos que apresentem **qualquer** dos seguintes critérios:
 
@@ -39,7 +81,7 @@ Serão excluídos indivíduos que apresentem **qualquer** dos seguintes critéri
 5. Ausência de smartphone compatível ou sem acesso regular a internet
 6. Qualquer condição clínica, psiquiátrica ou social que comprometa a segurança do participante ou a validade dos dados
 
-## Recrutamento
+### Recrutamento
 
 O recrutamento será realizado na USF participante através de duas vias:
 
@@ -49,10 +91,58 @@ O recrutamento será realizado na USF participante através de duas vias:
 
 Os candidatos receberão informação escrita sobre o estudo e terão um período mínimo de 48 horas para decidir a sua participação antes de assinar o consentimento informado.
 
+### Percurso do Participante
+
+![Diagrama de atividade do percurso do participante](images/participante.png)
+
+---
+
+## Intervenções
+
+### Grupo de Intervenção
+
+Os participantes randomizados para o grupo de intervenção receberão a aplicação RespiRA no momento da avaliação basal (T0), com sessão de formação de 15 minutos.
+
+**Funcionalidades principais:**
+
+**Monitorização de sintomas (ACT):** Questionário ACT com 5 perguntas sobre controlo da asma. Frequência semanal com notificação ao domingo.
+
+**Registo de peak flow:** Introdução manual dos valores, com gráficos de evolução e avisos caso o valor desça abaixo de 60% do previsto. Frequência diária, preferencialmente de manhã.
+
+**Lembretes de medicação:** Notificações push nos horários definidos para cada medicamento prescrito, com opção de confirmar ou adiar a toma.
+
+**Plano de ação e Educação:** Sugestões baseadas nas guidelines GINA e módulos informativos sobre asma.
+
+#### Diagrama de Atividade da Aplicação
+
+![Diagrama de atividade da aplicação RespiRA](images/aplicacao.png)
+
+#### Casos de Uso
+
+![Diagrama de casos de uso](images/casosdeuso.png)
+
+#### Diagrama de Sequência
+
+![Diagrama de sequência: registo de peak flow](images/sequencia.png)
+
+### Grupo Controlo
+
+Os participantes randomizados para o grupo controlo receberão cuidado habitual isolado, sem acesso à aplicação RespiRA, incluindo consultas médicas programadas, acesso à medicação prescrita e material educativo standard. Após o término do ensaio, será ponderado o acesso à aplicação como medida de equidade.
+
+### Critérios de Descontinuação
+
+Participantes serão retirados do estudo se:
+
+1. Retirarem o consentimento informado em qualquer momento
+2. Desenvolverem uma condição clínica que torne a continuação insegura
+3. Ocorrer violação grave do protocolo que comprometa a integridade dos dados
+
+---
+
 ## Ética e Disseminação
 
 O protocolo será submetido para aprovação pela Comissão de Ética para a Saúde (CES). O estudo cumprirá a Declaração de Helsínquia e as Boas Práticas Clínicas (GCP).
 
-A recolha e armazenamento dos dados respeitarão o Regulamento Geral sobre a Proteção de Dados (RGPD), com pseudonimização dos participantes através de código único.
+A recolha e armazenamento dos dados respeitarão o RGPD, com pseudonimização dos participantes através de código único.
 
 Os resultados serão submetidos para publicação em revistas científicas com revisão por pares e apresentados em congressos médicos, independentemente da direção dos resultados.
