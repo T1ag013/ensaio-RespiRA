@@ -200,27 +200,27 @@
     "href": "resultados.html",
     "title": "Resultados",
     "section": "",
-    "text": "Pontuação do Asthma Control Test (ACT)\nO Asthma Control Test (ACT) é um questionário validado, auto-administrado, composto por 5 perguntas que avaliam o controlo da asma nas últimas 4 semanas. A pontuação varia entre 5 (controlo muito mau) e 25 (controlo total).\nMomento de avaliação: Baseline (semana 0) e follow-up às 4, 8 e 12 semanas\nEndpoint primário final: Avaliação às 12 semanas\nDefinição de sucesso: Diferença estatisticamente significativa na variação da pontuação média do ACT entre grupos às 12 semanas, ou ACT ≥ 20 no grupo de intervenção, ou aumento ≥ 3 pontos face à linha de base"
+    "text": "library(tidyverse)\nlibrary(here)\nlibrary(gtsummary)\nlibrary(gt)\nlibrary(janitor)"
+  },
+  {
+    "objectID": "resultados.html#dados",
+    "href": "resultados.html#dados",
+    "title": "Resultados",
+    "section": "Dados",
+    "text": "Dados\n\ndados &lt;- read_csv(here(\"data\", \"raw\", \"respira.csv\"))"
+  },
+  {
+    "objectID": "resultados.html#tabela-de-características-basais",
+    "href": "resultados.html#tabela-de-características-basais",
+    "title": "Resultados",
+    "section": "Tabela de Características Basais",
+    "text": "Tabela de Características Basais\n\ndados |&gt;\n  select(-patient_id) |&gt;\n  tbl_summary(by = grupo) |&gt;\n  add_p() |&gt;\n  add_overall() |&gt;\n  bold_labels()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCharacteristic\nOverall\nN = 301\ncontrolo\nN = 151\nintervencao\nN = 151\np-value2\n\n\n\n\nidade\n41 (28, 52)\n45 (27, 56)\n32 (28, 48)\n0.4\n\n\nsexo\n\n\n\n\n\n\n0.7\n\n\n    F\n19 (63%)\n9 (60%)\n10 (67%)\n\n\n\n\n    M\n11 (37%)\n6 (40%)\n5 (33%)\n\n\n\n\nact_baseline\n17.15 (14.60, 18.50)\n17.40 (14.30, 18.50)\n17.10 (14.90, 19.20)\n0.9\n\n\nact_semana12\n18.3 (16.1, 22.1)\n17.3 (14.5, 20.3)\n18.4 (16.3, 22.6)\n0.2\n\n\n    Unknown\n3\n3\n0\n\n\n\n\npeak_flow_baseline\n326 (280, 372)\n328 (275, 379)\n309 (280, 367)\n0.7\n\n\npeak_flow_semana12\n362 (309, 385)\n324 (288, 381)\n365 (310, 395)\n0.3\n\n\n    Unknown\n3\n3\n0\n\n\n\n\nexacerbacoes_12sem\n\n\n\n\n\n\n0.2\n\n\n    0\n14 (47%)\n5 (33%)\n9 (60%)\n\n\n\n\n    1\n9 (30%)\n4 (27%)\n5 (33%)\n\n\n\n\n    2\n6 (20%)\n5 (33%)\n1 (6.7%)\n\n\n\n\n    3\n1 (3.3%)\n1 (6.7%)\n0 (0%)\n\n\n\n\naqlq_semana12\n4.50 (4.30, 5.30)\n4.50 (4.00, 4.80)\n4.90 (4.30, 5.90)\n0.2\n\n\n    Unknown\n3\n3\n0\n\n\n\n\nadesao\n0.78 (0.70, 0.82)\n0.74 (0.63, 0.81)\n0.81 (0.74, 0.85)\n0.056\n\n\n\n1 Median (Q1, Q3); n (%)\n\n\n2 Wilcoxon rank sum exact test; Pearson’s Chi-squared test; Fisher’s exact test"
   },
   {
     "objectID": "resultados.html#outcome-primário",
     "href": "resultados.html#outcome-primário",
     "title": "Resultados",
-    "section": "",
-    "text": "Pontuação do Asthma Control Test (ACT)\nO Asthma Control Test (ACT) é um questionário validado, auto-administrado, composto por 5 perguntas que avaliam o controlo da asma nas últimas 4 semanas. A pontuação varia entre 5 (controlo muito mau) e 25 (controlo total).\nMomento de avaliação: Baseline (semana 0) e follow-up às 4, 8 e 12 semanas\nEndpoint primário final: Avaliação às 12 semanas\nDefinição de sucesso: Diferença estatisticamente significativa na variação da pontuação média do ACT entre grupos às 12 semanas, ou ACT ≥ 20 no grupo de intervenção, ou aumento ≥ 3 pontos face à linha de base"
-  },
-  {
-    "objectID": "resultados.html#outcomes-secundários",
-    "href": "resultados.html#outcomes-secundários",
-    "title": "Resultados",
-    "section": "Outcomes Secundários",
-    "text": "Outcomes Secundários\n\nValores de Peak Flow (PEF): Avaliação da média e variabilidade diária do PEF ao longo das 12 semanas\nTaxa de Exacerbações: Número de exacerbações de asma documentadas durante o período de 12 semanas\nTaxa de Adesão à Medicação: Percentagem de doses tomadas face às prescritas, avaliada aos 4, 8 e 12 semanas\nQualidade de Vida (AQLQ): Aplicado na linha de base e às 12 semanas\nRecurso a Cuidados Não Programados: Número de idas ao serviço de urgência motivadas por agravamento da asma\nSatisfação com os Cuidados de Saúde: Avaliado através de questionário padronizado no final da intervenção"
-  },
-  {
-    "objectID": "resultados.html#análise-estatística",
-    "href": "resultados.html#análise-estatística",
-    "title": "Resultados",
-    "section": "Análise Estatística",
-    "text": "Análise Estatística\nA análise será essencialmente exploratória e descritiva, focada na estimação da magnitude do efeito e nos respetivos intervalos de confiança.\nNível de significância: α = 0,05 (bicaudal)\nSoftware: R (versão ≥ 4.0)\nOutcome primário e secundários: Teste t de Student para amostras independentes ou Teste U de Mann-Whitney\nMedidas repetidas: Modelo Linear de Efeitos Mistos (LMM)\nTaxa de adesão: Teste Qui-Quadrado de Pearson ou Teste Exato de Fisher\nPopulação de análise: Intention-to-Treat (ITT), com análise Per-Protocol (PP) de sensibilidade"
+    "section": "Outcome Primário",
+    "text": "Outcome Primário\n\nggplot(dados, aes(x = grupo, y = act_semana12, fill = grupo)) +\n  geom_boxplot(alpha = 0.7) +\n  geom_jitter(width = 0.2, alpha = 0.5) +\n  labs(\n    title = \"ACT às 12 Semanas por Grupo\",\n    x = \"Grupo\",\n    y = \"Pontuação ACT\",\n    fill = \"Grupo\"\n  ) +\n  theme_minimal()"
   }
 ]
