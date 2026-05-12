@@ -2,39 +2,56 @@
 title: "Resultados"
 ---
 
+```{r}
+#| label: setup
+#| message: false
+#| warning: false
+
+library(tidyverse)
+library(here)
+library(gtsummary)
+library(gt)
+library(janitor)
+```
+
+## Dados
+
+```{r}
+#| label: carregar-dados
+#| message: false
+#| warning: false
+
+dados <- read_csv(here("data", "raw", "respira.csv"))
+```
+
+## Tabela de Características Basais
+
+```{r}
+#| label: tabela-basais
+#| warning: false
+
+dados |>
+  select(-patient_id) |>
+  tbl_summary(by = grupo) |>
+  add_p() |>
+  add_overall() |>
+  bold_labels()
+```
+
 ## Outcome Primário
 
-**Pontuação do Asthma Control Test (ACT)**
+```{r}
+#| label: grafico-act
+#| warning: false
 
-O Asthma Control Test (ACT) é um questionário validado, auto-administrado, composto por 5 perguntas que avaliam o controlo da asma nas últimas 4 semanas. A pontuação varia entre 5 (controlo muito mau) e 25 (controlo total).
-
-**Momento de avaliação:** Baseline (semana 0) e follow-up às 4, 8 e 12 semanas
-
-**Endpoint primário final:** Avaliação às 12 semanas
-
-**Definição de sucesso:** Diferença estatisticamente significativa na variação da pontuação média do ACT entre grupos às 12 semanas, ou ACT ≥ 20 no grupo de intervenção, ou aumento ≥ 3 pontos face à linha de base
-
-## Outcomes Secundários
-
-1.  **Valores de Peak Flow (PEF):** Avaliação da média e variabilidade diária do PEF ao longo das 12 semanas
-2.  **Taxa de Exacerbações:** Número de exacerbações de asma documentadas durante o período de 12 semanas
-3.  **Taxa de Adesão à Medicação:** Percentagem de doses tomadas face às prescritas, avaliada aos 4, 8 e 12 semanas
-4.  **Qualidade de Vida (AQLQ):** Aplicado na linha de base e às 12 semanas
-5.  **Recurso a Cuidados Não Programados:** Número de idas ao serviço de urgência motivadas por agravamento da asma
-6.  **Satisfação com os Cuidados de Saúde:** Avaliado através de questionário padronizado no final da intervenção
-
-## Análise Estatística
-
-A análise será essencialmente exploratória e descritiva, focada na estimação da magnitude do efeito e nos respetivos intervalos de confiança.
-
-**Nível de significância:** α = 0,05 (bicaudal)
-
-**Software:** R (versão ≥ 4.0)
-
-**Outcome primário e secundários:** Teste t de Student para amostras independentes ou Teste U de Mann-Whitney
-
-**Medidas repetidas:** Modelo Linear de Efeitos Mistos (LMM)
-
-**Taxa de adesão:** Teste Qui-Quadrado de Pearson ou Teste Exato de Fisher
-
-**População de análise:** Intention-to-Treat (ITT), com análise Per-Protocol (PP) de sensibilidade
+ggplot(dados, aes(x = grupo, y = act_semana12, fill = grupo)) +
+  geom_boxplot(alpha = 0.7) +
+  geom_jitter(width = 0.2, alpha = 0.5) +
+  labs(
+    title = "ACT às 12 Semanas por Grupo",
+    x = "Grupo",
+    y = "Pontuação ACT",
+    fill = "Grupo"
+  ) +
+  theme_minimal()
+```
