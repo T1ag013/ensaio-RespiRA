@@ -4,47 +4,72 @@ title: "Declaração de IA"
 
 ## Utilização de Inteligência Artificial neste Trabalho
 
-Em conformidade com as exigências da unidade curricular, declaramos de forma transparente o uso de ferramentas de Inteligência Artificial ao longo das três entregas deste projeto.
+Em conformidade com as exigências da unidade curricular, declaramos de forma transparente
+o uso de ferramentas de Inteligência Artificial ao longo das três entregas deste projeto.
 
-------------------------------------------------------------------------
+---
 
-## Entrega 1 — Construção do Protocolo (Normas SPIRIT)
+## Entrega 1: Construção do Protocolo (Normas SPIRIT)
 
 **Ferramenta utilizada:** Gemini (Google)
 
-**Estratégia:** Fornecer à IA o macro-cenário do estudo RespiRA e solicitar a expansão em linguagem médica formal, de acordo com as normas SPIRIT.
+**Estratégia:** Fornecer à IA o macro-cenário do estudo RespiRA e solicitar a expansão
+em linguagem médica formal, de acordo com as normas SPIRIT.
 
 **Prompts utilizados:**
 
-1.  Racional: "Considerando o Cenário 1 (Ensaio RespiRA), escreve a secção 1.1 de Racional Clínico do protocolo SPIRIT, justificando a pertinência da app RespiRA face às falhas do cuidado habitual isolado."
-2.  Objetivos: "Define o objetivo primário do estudo RespiRA, focado na variação do score ACT às 12 semanas. Lista também os objetivos secundários incluindo Peak Flow, exacerbações, adesão e qualidade de vida (AQLQ)."
-3.  Desenho do estudo: "Escreve a secção do Desenho do Estudo em formato de ensaio clínico. Integra: duração de 12 semanas, 30 participantes, setting numa USF, randomização 1:1, e visitas às semanas 4, 8 e 12."
-4.  Critérios de elegibilidade: "Expande os critérios do cenário 1 numa lista técnica formal. Adiciona critérios lógicos de exclusão que protejam o estudo face aos desafios."
-5.  Intervenção: "Descreve as secções de Intervenção e Comparador. O grupo RespiRA tem a app com monitorização ACT, lembretes, registo de peak flow, plano de ação e alertas."
-6.  Outcomes: "Escreve a secção da avaliação e outcomes, focando o primário no ACT e os secundários no Peak Flow, exacerbações, adesão e qualidade de vida."
-7.  Análise estatística: "Escreve a secção de Análise Estatística para o protocolo do estudo piloto RespiRA (n=30)."
-8.  Ética: "Redige a secção final de Ética e Disseminação para o protocolo do estudo RespiRA."
+1. Racional: "Considerando o Cenário 1 (Ensaio RespiRA), escreve a secção 1.1 de Racional
+Clínico do protocolo SPIRIT, justificando a pertinência da app RespiRA face às falhas do
+cuidado habitual isolado."
+2. Objetivos: "Define o objetivo primário do estudo RespiRA, focado na variação do score
+ACT às 12 semanas. Lista também os objetivos secundários incluindo Peak Flow,
+exacerbações, adesão e qualidade de vida (AQLQ)."
+3. Desenho do estudo: "Escreve a secção do Desenho do Estudo em formato de ensaio
+clínico. Integra: duração de 12 semanas, 30 participantes, setting numa USF,
+randomização 1:1, e visitas às semanas 4, 8 e 12."
+4. Critérios de elegibilidade: "Expande os critérios do cenário 1 numa lista técnica formal.
+Adiciona critérios lógicos de exclusão que protejam o estudo face aos desafios."
+5. Intervenção: "Descreve as secções de Intervenção e Comparador. O grupo RespiRA tem
+a app com monitorização ACT, lembretes, registo de peak flow, plano de ação e alertas."
+6. Outcomes: "Escreve a secção da avaliação e outcomes, focando o primário no ACT e os
+secundários no Peak Flow, exacerbações, adesão e qualidade de vida."
+7. Análise estatística: "Escreve a secção de Análise Estatística para o protocolo do estudo
+piloto RespiRA (n=30)."
+8. Ética: "Redige a secção final de Ética e Disseminação para o protocolo do estudo RespiRA."
 
-**Revisão humana:** Cada secção foi analisada criticamente. O racional foi ajustado para alinhar com as guidelines GINA 2023. Os critérios de elegibilidade foram expandidos por serem demasiado genéricos. A análise estatística foi verificada quanto à adequação dos testes à amostra (n=30). Os diagramas foram gerados no Mermaid a partir de códigos produzidos pelo Gemini.
+**Revisão humana:** Cada secção foi analisada criticamente. O racional foi ajustado para
+alinhar com as guidelines GINA 2023. Os critérios de elegibilidade foram expandidos por
+serem demasiado genéricos. A análise estatística foi verificada quanto à adequação dos
+testes à amostra (n=30). Os diagramas foram gerados no Mermaid a partir de códigos
+produzidos pelo Gemini.
 
-------------------------------------------------------------------------
+---
 
-## Entrega 2 — Dicionário de Dados (REDCap)
+## Entrega 2: Dicionário de Dados (REDCap)
 
 **Ferramenta utilizada:** Claude (Anthropic)
 
 **Prompts utilizados:**
 
-1.  "De acordo com o tema RespiRA, dá-me exemplos de variáveis para a realização de um dicionário de dados tendo em conta o ficheiro de estrutura do REDCap."
-2.  "Quero só que me expliques a importância do AQLQ e quais são as perguntas a fazer, no máximo umas 5 ou 6."
-3.  "Quero que me apresentes as fórmulas do REDCap para o cálculo da idade, IMC, taxa de adesão em percentagem, categoria de acordo com a taxa de adesão e somas para scores totais."
-4.  "Eu pesquisei no Google e falaram da escala MMAS-4, consegues explicar o que é e dizer se seria relevante?"
+1. "De acordo com o tema RespiRA, dá-me exemplos de variáveis para a realização de um
+dicionário de dados tendo em conta o ficheiro de estrutura do REDCap."
+2. "Quero só que me expliques a importância do AQLQ e quais são as perguntas a fazer,
+no máximo umas 5 ou 6."
+3. "Quero que me apresentes as fórmulas do REDCap para o cálculo da idade, IMC, taxa
+de adesão em percentagem, categoria de acordo com a taxa de adesão e somas para
+scores totais."
+4. "Eu pesquisei no Google e falaram da escala MMAS-4, consegues explicar o que é e
+dizer se seria relevante?"
 
-**Revisão humana:** Os outputs foram analisados de forma crítica. A proposta de organização do dicionário foi aceite com alterações, adaptada à realidade do estudo. Diversas variáveis sugeridas foram rejeitadas por não se adequarem ao contexto clínico. As fórmulas do REDCap serviram de ponto de partida, sendo ajustadas e confrontadas com a documentação oficial.
+**Revisão humana:** Os outputs foram analisados de forma crítica. A proposta de
+organização do dicionário foi aceite com alterações, adaptada à realidade do estudo.
+Diversas variáveis sugeridas foram rejeitadas por não se adequarem ao contexto clínico.
+As fórmulas do REDCap serviram de ponto de partida, sendo ajustadas e confrontadas
+com a documentação oficial.
 
-------------------------------------------------------------------------
+---
 
-## Entrega 3 — Construção do Site (Quarto/GitHub)
+## Entrega 3: Construção do Site (Quarto/GitHub)
 
 **Ferramenta utilizada:** Claude (Anthropic)
 
@@ -67,5 +92,3 @@ conteúdo científico foi produzido pelo grupo com base no protocolo v1 elaborad
 na Entrega 1. A estrutura do site, a escolha das secções e a validação do conteúdo
 foram decisões do grupo. Os textos gerados foram revistos e adaptados antes de
 serem publicados.
-
-**Revisão humana:** Todo o conteúdo científico foi produzido pelo grupo com base no protocolo v1 e na literatura. A IA foi utilizada exclusivamente para reformatar o texto em sintaxe Quarto Markdown e apoiar na configuração técnica do repositório GitHub. Todo o conteúdo foi revisto e validado pelos membros do grupo antes de ser publicado.
