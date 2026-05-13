@@ -71,6 +71,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -276,9 +305,35 @@ ul.task-list li input[type="checkbox"] {
 <p>Os participantes randomizados para o grupo de intervenção receberão a aplicação RespiRA no momento da avaliação basal (T0), com sessão de formação de 15 minutos.</p>
 <p><strong>Funcionalidades principais:</strong></p>
 <p><strong>Monitorização de sintomas (ACT):</strong> Questionário ACT com 5 perguntas sobre controlo da asma. Frequência semanal com notificação ao domingo.</p>
-<p><strong>Registo de peak flow:</strong> Introdução manual dos valores, com gráficos de evolução e avisos caso o valor desça abaixo de 60% do previsto. Frequência diária, preferencialmente de manhã.</p>
+<p><strong>Registo de peak flow:</strong> Introdução manual dos valores, com gráficos de evolução e avisos caso o valor desça abaixo de 60% do previsto. Frequência diária, preferencialmente de manhã. #### Diagrama de Sequência</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/sequencia.png" class="img-fluid figure-img"></p>
+<figcaption>Diagrama de sequência: registo de peak flow</figcaption>
+</figure>
+</div>
 <p><strong>Lembretes de medicação:</strong> Notificações push nos horários definidos para cada medicamento prescrito, com opção de confirmar ou adiar a toma.</p>
 <p><strong>Plano de ação e Educação:</strong> Sugestões baseadas nas guidelines GINA e módulos informativos sobre asma.</p>
+</section>
+<section id="instalação-e-onboarding" class="level3">
+<h3 class="anchored" data-anchor-id="instalação-e-onboarding">Instalação e Onboarding</h3>
+<p>Após confirmação de elegibilidade e assinatura do consentimento informado, os participantes do grupo de intervenção receberão, na consulta basal (T0), um código de acesso único para download da aplicação RespiRA através da App Store ou Google Play.</p>
+<p>O processo de onboarding decorrerá na própria consulta e inclui:</p>
+<ol type="1">
+<li><strong>Instalação assistida:</strong> um elemento da equipa de investigação apoia o participante na instalação e criação de conta, garantindo o correto funcionamento no dispositivo pessoal.</li>
+<li><strong>Configuração inicial:</strong> introdução dos dados clínicos base (medicação prescrita, horários de toma, valor de peak flow previsto), com apoio do investigador.</li>
+<li><strong>Tutorial guiado:</strong> a app apresenta um tutorial interativo de aproximadamente 10 minutos, percorrendo todas as funcionalidades principais com instruções passo a passo.</li>
+<li><strong>Esclarecimento de dúvidas:</strong> no final, o participante tem a oportunidade de colocar questões à equipa antes de sair da consulta.</li>
+</ol>
+<p>Será disponibilizado um guia de utilização em papel como suporte adicional.</p>
+</section>
+<section id="suporte-técnico" class="level3">
+<h3 class="anchored" data-anchor-id="suporte-técnico">Suporte Técnico</h3>
+<p>Os participantes terão acesso a suporte técnico durante todo o período do estudo:</p>
+<p><strong>Linha de apoio telefónico:</strong> disponível de segunda a sexta, das 9h às 17h.</p>
+<p><strong>Email de suporte:</strong> para questões não urgentes, com resposta garantida em até 48 horas úteis.</p>
+<p><strong>FAQ integrado na app:</strong> secção de perguntas frequentes acessível diretamente na aplicação.</p>
+<p>Em caso de perda ou substituição de dispositivo, o participante poderá reinstalar a app e recuperar os seus dados através das credenciais de acesso criadas no onboarding.</p>
 <section id="diagrama-de-atividade-da-aplicação" class="level4">
 <h4 class="anchored" data-anchor-id="diagrama-de-atividade-da-aplicação">Diagrama de Atividade da Aplicação</h4>
 <div class="quarto-figure quarto-figure-center">
@@ -294,15 +349,6 @@ ul.task-list li input[type="checkbox"] {
 <figure class="figure">
 <p><img src="images/casosdeuso.png" class="img-fluid figure-img"></p>
 <figcaption>Diagrama de casos de uso</figcaption>
-</figure>
-</div>
-</section>
-<section id="diagrama-de-sequência" class="level4">
-<h4 class="anchored" data-anchor-id="diagrama-de-sequência">Diagrama de Sequência</h4>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/sequencia.png" class="img-fluid figure-img"></p>
-<figcaption>Diagrama de sequência: registo de peak flow</figcaption>
 </figure>
 </div>
 </section>
@@ -322,11 +368,68 @@ ul.task-list li input[type="checkbox"] {
 <hr>
 </section>
 </section>
+<section id="avaliações-e-outcomes" class="level2">
+<h2 class="anchored" data-anchor-id="avaliações-e-outcomes">Avaliações e Outcomes</h2>
+<section id="outcome-primário" class="level3">
+<h3 class="anchored" data-anchor-id="outcome-primário">Outcome Primário</h3>
+<p><strong>Pontuação do Asthma Control Test (ACT)</strong></p>
+<p>O Asthma Control Test (ACT) é um questionário validado, auto-administrado, composto por 5 perguntas que avaliam o controlo da asma nas últimas 4 semanas. A pontuação varia entre 5 (controlo muito mau) e 25 (controlo total).</p>
+<p><strong>Momento de avaliação:</strong> Baseline (semana 0) e follow-up às 4, 8 e 12 semanas.</p>
+<p><strong>Definição de sucesso:</strong> Diferença estatisticamente significativa na variação da pontuação média do ACT entre grupos às 12 semanas, ou ACT &gt;= 20 no grupo de intervenção, ou aumento &gt;= 3 pontos face à linha de base.</p>
+</section>
+<section id="outcomes-secundários" class="level3">
+<h3 class="anchored" data-anchor-id="outcomes-secundários">Outcomes Secundários</h3>
+<ol type="1">
+<li><strong>Valores de Peak Flow (PEF):</strong> Avaliação da média e variabilidade diária ao longo das 12 semanas, calculada pela seguinte fórmula:</li>
+</ol>
+<p><span class="math display">\[Variabilidade (\%) = \frac{PEF_{max} - PEF_{min}}{\frac{PEF_{max} + PEF_{min}}{2}} \times 100\]</span></p>
+<ol start="2" type="1">
+<li><strong>Taxa de Exacerbações:</strong> Número de exacerbações documentadas durante 12 semanas.</li>
+<li><strong>Taxa de Adesão à Medicação:</strong> Percentagem de doses tomadas face às prescritas, avaliada aos 4, 8 e 12 semanas.</li>
+<li><strong>Qualidade de Vida (AQLQ):</strong> Aplicado na baseline e às 12 semanas.</li>
+<li><strong>Recurso a Cuidados Não Programados:</strong> Número de idas ao serviço de urgência motivadas por agravamento da asma.</li>
+<li><strong>Satisfação com os Cuidados de Saúde:</strong> Avaliado através de questionário padronizado na semana 12.</li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="análise-estatística" class="level2">
+<h2 class="anchored" data-anchor-id="análise-estatística">Análise Estatística</h2>
+<section id="princípios-gerais" class="level3">
+<h3 class="anchored" data-anchor-id="princípios-gerais">Princípios Gerais</h3>
+<p>Atendendo à natureza de estudo piloto com uma amostra de 30 participantes, a análise estatística será essencialmente exploratória e descritiva. O foco principal será a estimação da magnitude do efeito e os respetivos intervalos de confiança.</p>
+<p><strong>Nivel de significancia:</strong> alfa = 0,05 (bicaudal)</p>
+<p><strong>Software:</strong> R (versao &gt;= 4.0)</p>
+</section>
+<section id="métodos-de-análise" class="level3">
+<h3 class="anchored" data-anchor-id="métodos-de-análise">Métodos de Análise</h3>
+<p><strong>Outcome primário e secundários:</strong> Teste t de Student para amostras independentes (se distribuição normal) ou Teste U de Mann-Whitney (se não normal).</p>
+<p><strong>Medidas repetidas:</strong> Modelo Linear de Efeitos Mistos (LMM), incluindo tempo, grupo e interação tempo x grupo como efeitos fixos.</p>
+<p><strong>Taxa de adesão:</strong> Teste Qui-Quadrado de Pearson ou Teste Exato de Fisher.</p>
+<p><strong>Dados de contagem:</strong> Modelos de regressão de Poisson.</p>
+</section>
+<section id="população-de-análise" class="level3">
+<h3 class="anchored" data-anchor-id="população-de-análise">População de Análise</h3>
+<p>A análise primária será realizada por <strong>Intention-to-Treat (ITT)</strong>, em que todos os participantes randomizados serão analisados nos grupos para os quais foram originalmente alocados. Será realizada uma análise <strong>Per-Protocol (PP)</strong> de sensibilidade.</p>
+<hr>
+</section>
+</section>
 <section id="ética-e-disseminação" class="level2">
 <h2 class="anchored" data-anchor-id="ética-e-disseminação">Ética e Disseminação</h2>
 <p>O protocolo será submetido para aprovação pela Comissão de Ética para a Saúde (CES). O estudo cumprirá a Declaração de Helsínquia e as Boas Práticas Clínicas (GCP).</p>
 <p>A recolha e armazenamento dos dados respeitarão o RGPD, com pseudonimização dos participantes através de código único.</p>
 <p>Os resultados serão submetidos para publicação em revistas científicas com revisão por pares e apresentados em congressos médicos, independentemente da direção dos resultados.</p>
+</section>
+<section id="referências-bibliográficas" class="level2">
+<h2 class="anchored" data-anchor-id="referências-bibliográficas">Referências Bibliográficas</h2>
+<ol type="1">
+<li>Global Initiative for Asthma (GINA). Global Strategy for Asthma Management and Prevention. (2023).</li>
+<li>Chan AW, et al.&nbsp;SPIRIT 2013 statement: defining standard protocol items for clinical trials. Ann Intern Med. 2013.</li>
+<li>Eldridge SM, et al.&nbsp;Defining feasibility and pilot studies in preparation for randomised controlled trials. PLoS One. 2016.</li>
+<li>Hui CY, et al.&nbsp;The use of mobile applications to support self-management for people with asthma. J Am Med Inform Assoc. 2017.</li>
+<li>Nathan RA, et al.&nbsp;Development of the asthma control test. J Allergy Clin Immunol. 2004.</li>
+<li>Juniper EF, et al.&nbsp;Evaluation of impairment of health related quality of life in asthma. Thorax. 1992.</li>
+</ol>
 
 
 </section>
