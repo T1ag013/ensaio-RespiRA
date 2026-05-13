@@ -149,57 +149,72 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="grupo-de-intervenção-aplicação-respira" class="level2">
-<h2 class="anchored" data-anchor-id="grupo-de-intervenção-aplicação-respira">Grupo de Intervenção: Aplicação RespiRA</h2>
-<p>Os participantes randomizados para o grupo de intervenção receberão a aplicação RespiRA no momento da avaliação basal (T0), acompanhada de uma sessão de formação de aproximadamente 15 minutos.</p>
+<section id="documentos" class="level2">
+<h2 class="anchored" data-anchor-id="documentos">Documentos</h2>
+<ul>
+<li><a href="files/eCRF_RespiRA.pdf">eCRF RespiRA (PDF)</a></li>
+<li><a href="files/DicionarioDadosRespiRA.csv">Dicionário de Dados (CSV)</a></li>
+</ul>
 </section>
-<section id="funcionalidades-principais" class="level2">
-<h2 class="anchored" data-anchor-id="funcionalidades-principais">Funcionalidades Principais</h2>
-<p><strong>Monitorização de sintomas (ACT)</strong></p>
-<p>Apresenta o questionário ACT com 5 perguntas sobre controlo da asma. Frequência semanal com notificação ao domingo.</p>
-<p><strong>Registo de peak flow</strong></p>
-<p>Permite a introdução manual dos valores, gerando gráficos de evolução e avisos caso o valor desça abaixo de 60% do previsto. Frequência diária, preferencialmente de manhã.</p>
-<p><strong>Lembretes de medicação</strong></p>
-<p>Envia notificações push nos horários definidos para cada medicamento prescrito, com opção de confirmar ou adiar a toma.</p>
-<p><strong>Plano de ação e Educação</strong></p>
-<p>Sugestões de ações baseadas nas guidelines GINA e módulos informativos sobre asma.</p>
+<section id="instrumentos-de-recolha-de-dados" class="level2">
+<h2 class="anchored" data-anchor-id="instrumentos-de-recolha-de-dados">Instrumentos de Recolha de Dados</h2>
+<p>Os dados do estudo RespiRA são recolhidos através de um eCRF (Electronic Case Report Form) implementado na plataforma REDCap. O formulário está organizado nas seguintes secções:</p>
+<hr>
 </section>
-<section id="instalação-e-onboarding" class="level2">
-<h2 class="anchored" data-anchor-id="instalação-e-onboarding">Instalação e Onboarding</h2>
-<p>O processo de onboarding decorre na consulta basal (T0) e inclui:</p>
+<section id="dados-base" class="level2">
+<h2 class="anchored" data-anchor-id="dados-base">Dados Base</h2>
+<p>Recolhidos no momento de inclusão de cada participante:</p>
+<p><strong>Informação Administrativa:</strong> ID do participante, consentimento informado, data de consentimento, centro de saúde/USF e grupo de randomização (Intervenção/Controlo).</p>
+<p><strong>Dados Sociodemográficos:</strong> Data de nascimento, idade, sexo, habilitações literárias, situação profissional, hábitos tabágicos, altura, peso e IMC.</p>
+<p><strong>Dados Clínicos de Asma:</strong> Data do diagnóstico, gravidade da asma, medicação baseline (ICS/LABA e SABA), outras medicações relevantes e comorbilidades.</p>
+<p><strong>Literacia Digital:</strong> Posse de smartphone e experiência prévia com apps de saúde.</p>
+<hr>
+</section>
+<section id="dados-de-avaliação" class="level2">
+<h2 class="anchored" data-anchor-id="dados-de-avaliação">Dados de Avaliação</h2>
+<p>Recolhidos na Baseline (Semana 0) e nas semanas 4, 8 e 12:</p>
+<section id="act---asthma-control-test" class="level3">
+<h3 class="anchored" data-anchor-id="act---asthma-control-test">ACT - Asthma Control Test</h3>
+<p>Questionário validado com 5 perguntas sobre o controlo da asma nas últimas 4 semanas:</p>
 <ol type="1">
-<li>Instalação assistida por um elemento da equipa de investigação</li>
-<li>Configuração inicial com dados clínicos base (medicação, horários, valor de peak flow previsto)</li>
-<li>Tutorial guiado de aproximadamente 10 minutos</li>
-<li>Esclarecimento de dúvidas com a equipa</li>
+<li>Limitação nas atividades habituais por causa da asma</li>
+<li>Frequência de falta de ar</li>
+<li>Sintomas noturnos (tosse, falta de ar, aperto no peito)</li>
+<li>Utilização do inalador SOS</li>
+<li>Avaliação global do controlo da asma</li>
 </ol>
-<p>Será disponibilizado um guia de utilização em papel como suporte adicional.</p>
+<p><strong>Pontuação total (5-25):</strong> 5-19 asma não controlada; 20-24 asma bem controlada; 25 asma completamente controlada.</p>
 </section>
-<section id="suporte-técnico" class="level2">
-<h2 class="anchored" data-anchor-id="suporte-técnico">Suporte Técnico</h2>
-<p>Os participantes terão acesso a suporte técnico durante todo o período do estudo:</p>
-<p><strong>Linha de apoio telefónico</strong>: disponível de segunda a sexta, das 9h às 17h</p>
-<p><strong>Email de suporte</strong>: para questões não urgentes, com resposta garantida em até 48 horas úteis</p>
-<p><strong>FAQ integrado na app</strong>: secção de perguntas frequentes acessível diretamente na aplicação</p>
+<section id="peak-flow-diário" class="level3">
+<h3 class="anchored" data-anchor-id="peak-flow-diário">Peak Flow Diário</h3>
+<p>Registo diário do débito expiratório máximo (L/min), com medições de manhã e tarde/noite (melhor de 3 medições). Inclui ainda registo de sintomas diários e número de doses SOS utilizadas.</p>
+<hr>
 </section>
-<section id="grupo-controlo" class="level2">
-<h2 class="anchored" data-anchor-id="grupo-controlo">Grupo Controlo</h2>
-<p>Os participantes randomizados para o grupo controlo receberão cuidado habitual isolado, sem acesso à aplicação RespiRA. O cuidado habitual inclui:</p>
-<ol type="1">
-<li>Consultas médicas programadas</li>
-<li>Acesso à medicação prescrita sem alteração do esquema</li>
-<li>Material educativo standard do centro de saúde</li>
-</ol>
-<p>Após o término do ensaio, será ponderado o acesso à aplicação como medida de equidade.</p>
 </section>
-<section id="critérios-de-descontinuação" class="level2">
-<h2 class="anchored" data-anchor-id="critérios-de-descontinuação">Critérios de Descontinuação</h2>
-<p>Participantes serão retirados do estudo se:</p>
-<ol type="1">
-<li>Retirarem o consentimento informado em qualquer momento</li>
-<li>Desenvolverem uma condição clínica que torne a continuação insegura</li>
-<li>Ocorrer violação grave do protocolo que comprometa a integridade dos dados</li>
-</ol>
+<section id="adesão-à-medicação" class="level2">
+<h2 class="anchored" data-anchor-id="adesão-à-medicação">Adesão à Medicação</h2>
+<p>Avaliada nas semanas 4, 8 e 12, incluindo:</p>
+<ul>
+<li>Número de doses previstas e tomadas no período</li>
+<li>Taxa de adesão (%)</li>
+<li>Categoria de adesão</li>
+<li>Motivos de falta de adesão (esquecimento, efeitos secundários, melhoria dos sintomas, custo)</li>
+<li>Escala MMAS-4 (4 perguntas sobre comportamentos de adesão)</li>
+</ul>
+<hr>
+</section>
+<section id="outcomes-secundários" class="level2">
+<h2 class="anchored" data-anchor-id="outcomes-secundários">Outcomes Secundários</h2>
+<p>Avaliados nas semanas 4, 8 e 12:</p>
+<p><strong>Exacerbações:</strong> Número de exacerbações no período.</p>
+<p><strong>Utilização de Serviços:</strong> Número de idas às urgências, internamentos hospitalares e consultas não programadas motivadas por asma.</p>
+<p><strong>AQLQ - Asthma Quality of Life Questionnaire:</strong> 4 perguntas sobre qualidade de vida relacionada com a asma nas últimas 4 semanas, com score total de 1 a 6.</p>
+<hr>
+</section>
+<section id="satisfação" class="level2">
+<h2 class="anchored" data-anchor-id="satisfação">Satisfação</h2>
+<p><strong>Satisfação com a App RespiRA</strong> (grupo intervenção): avalia facilidade de utilização, utilidade para controlo da asma, utilidade dos lembretes e do plano de ação, e recomendação a outros doentes.</p>
+<p><strong>Satisfação Geral com os Cuidados</strong> (ambos os grupos): avalia a satisfação com os cuidados recebidos na USF/centro de saúde.</p>
 
 
 </section>
