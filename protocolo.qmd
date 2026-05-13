@@ -2,6 +2,10 @@
 title: "Protocolo"
 ---
 
+## Documentos
+
+[Protocolo Completo (PDF)](files/protocolov1_pdf_latex.pdf)
+
 ## Introdução
 
 ### Racional
