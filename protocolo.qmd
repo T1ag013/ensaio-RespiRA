@@ -108,10 +108,45 @@ Os participantes randomizados para o grupo de intervenção receberão a aplica�
 **Monitorização de sintomas (ACT):** Questionário ACT com 5 perguntas sobre controlo da asma. Frequência semanal com notificação ao domingo.
 
 **Registo de peak flow:** Introdução manual dos valores, com gráficos de evolução e avisos caso o valor desça abaixo de 60% do previsto. Frequência diária, preferencialmente de manhã.
+#### Diagrama de Sequência
+
+![Diagrama de sequência: registo de peak flow](images/sequencia.png)
 
 **Lembretes de medicação:** Notificações push nos horários definidos para cada medicamento prescrito, com opção de confirmar ou adiar a toma.
 
 **Plano de ação e Educação:** Sugestões baseadas nas guidelines GINA e módulos informativos sobre asma.
+
+### Instalação e Onboarding
+
+Após confirmação de elegibilidade e assinatura do consentimento informado, os participantes
+do grupo de intervenção receberão, na consulta basal (T0), um código de acesso único para
+download da aplicação RespiRA através da App Store ou Google Play.
+
+O processo de onboarding decorrerá na própria consulta e inclui:
+
+1. **Instalação assistida:** um elemento da equipa de investigação apoia o participante na
+instalação e criação de conta, garantindo o correto funcionamento no dispositivo pessoal.
+2. **Configuração inicial:** introdução dos dados clínicos base (medicação prescrita, horários
+de toma, valor de peak flow previsto), com apoio do investigador.
+3. **Tutorial guiado:** a app apresenta um tutorial interativo de aproximadamente 10 minutos,
+percorrendo todas as funcionalidades principais com instruções passo a passo.
+4. **Esclarecimento de dúvidas:** no final, o participante tem a oportunidade de colocar
+questões à equipa antes de sair da consulta.
+
+Será disponibilizado um guia de utilização em papel como suporte adicional.
+
+### Suporte Técnico
+
+Os participantes terão acesso a suporte técnico durante todo o período do estudo:
+
+**Linha de apoio telefónico:** disponível de segunda a sexta, das 9h às 17h.
+
+**Email de suporte:** para questões não urgentes, com resposta garantida em até 48 horas úteis.
+
+**FAQ integrado na app:** secção de perguntas frequentes acessível diretamente na aplicação.
+
+Em caso de perda ou substituição de dispositivo, o participante poderá reinstalar a app e
+recuperar os seus dados através das credenciais de acesso criadas no onboarding.
 
 #### Diagrama de Atividade da Aplicação
 
@@ -121,9 +156,7 @@ Os participantes randomizados para o grupo de intervenção receberão a aplica�
 
 ![Diagrama de casos de uso](images/casosdeuso.png)
 
-#### Diagrama de Sequência
 
-![Diagrama de sequência: registo de peak flow](images/sequencia.png)
 
 ### Grupo Controlo
 
@@ -139,6 +172,72 @@ Participantes serão retirados do estudo se:
 
 ---
 
+## Avaliações e Outcomes
+
+### Outcome Primário
+
+**Pontuação do Asthma Control Test (ACT)**
+
+O Asthma Control Test (ACT) é um questionário validado, auto-administrado, composto por
+5 perguntas que avaliam o controlo da asma nas últimas 4 semanas. A pontuação varia entre
+5 (controlo muito mau) e 25 (controlo total).
+
+**Momento de avaliação:** Baseline (semana 0) e follow-up às 4, 8 e 12 semanas.
+
+**Definição de sucesso:** Diferença estatisticamente significativa na variação da pontuação
+média do ACT entre grupos às 12 semanas, ou ACT >= 20 no grupo de intervenção, ou
+aumento >= 3 pontos face à linha de base.
+
+### Outcomes Secundários
+
+1. **Valores de Peak Flow (PEF):** Avaliação da média e variabilidade diária ao longo das
+12 semanas, calculada pela seguinte fórmula:
+
+$$Variabilidade (\%) = \frac{PEF_{max} - PEF_{min}}{\frac{PEF_{max} + PEF_{min}}{2}} \times 100$$
+
+2. **Taxa de Exacerbações:** Número de exacerbações documentadas durante 12 semanas.
+3. **Taxa de Adesão à Medicação:** Percentagem de doses tomadas face às prescritas,
+avaliada aos 4, 8 e 12 semanas.
+4. **Qualidade de Vida (AQLQ):** Aplicado na baseline e às 12 semanas.
+5. **Recurso a Cuidados Não Programados:** Número de idas ao serviço de urgência
+motivadas por agravamento da asma.
+6. **Satisfação com os Cuidados de Saúde:** Avaliado através de questionário padronizado
+na semana 12.
+
+---
+
+## Análise Estatística
+
+### Princípios Gerais
+
+Atendendo à natureza de estudo piloto com uma amostra de 30 participantes, a análise
+estatística será essencialmente exploratória e descritiva. O foco principal será a estimação
+da magnitude do efeito e os respetivos intervalos de confiança.
+
+**Nivel de significancia:** alfa = 0,05 (bicaudal)
+
+**Software:** R (versao >= 4.0)
+
+### Métodos de Análise
+
+**Outcome primário e secundários:** Teste t de Student para amostras independentes (se
+distribuição normal) ou Teste U de Mann-Whitney (se não normal).
+
+**Medidas repetidas:** Modelo Linear de Efeitos Mistos (LMM), incluindo tempo, grupo e
+interação tempo x grupo como efeitos fixos.
+
+**Taxa de adesão:** Teste Qui-Quadrado de Pearson ou Teste Exato de Fisher.
+
+**Dados de contagem:** Modelos de regressão de Poisson.
+
+### População de Análise
+
+A análise primária será realizada por **Intention-to-Treat (ITT)**, em que todos os
+participantes randomizados serão analisados nos grupos para os quais foram originalmente
+alocados. Será realizada uma análise **Per-Protocol (PP)** de sensibilidade.
+
+---
+
 ## Ética e Disseminação
 
 O protocolo será submetido para aprovação pela Comissão de Ética para a Saúde (CES). O estudo cumprirá a Declaração de Helsínquia e as Boas Práticas Clínicas (GCP).
@@ -146,3 +245,12 @@ O protocolo será submetido para aprovação pela Comissão de Ética para a Sa�
 A recolha e armazenamento dos dados respeitarão o RGPD, com pseudonimização dos participantes através de código único.
 
 Os resultados serão submetidos para publicação em revistas científicas com revisão por pares e apresentados em congressos médicos, independentemente da direção dos resultados.
+
+## Referências Bibliográficas
+
+1.  Global Initiative for Asthma (GINA). Global Strategy for Asthma Management and Prevention. (2023).
+2.  Chan AW, et al. SPIRIT 2013 statement: defining standard protocol items for clinical trials. Ann Intern Med. 2013.
+3.  Eldridge SM, et al. Defining feasibility and pilot studies in preparation for randomised controlled trials. PLoS One. 2016.
+4.  Hui CY, et al. The use of mobile applications to support self-management for people with asthma. J Am Med Inform Assoc. 2017.
+5.  Nathan RA, et al. Development of the asthma control test. J Allergy Clin Immunol. 2004.
+6.  Juniper EF, et al. Evaluation of impairment of health related quality of life in asthma. Thorax. 1992.
