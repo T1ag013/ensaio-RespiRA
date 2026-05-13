@@ -4,7 +4,7 @@ title: "Protocolo"
 
 ## Documentos
 
-[Protocolo Completo (PDF)](files/protocolov1_pdf_latex.pdf)
+[Protocolo Completo (PDF)](files/protocolov1_latex_pdf.pdf)
 
 ## Introdução
 
@@ -120,9 +120,7 @@ Os participantes randomizados para o grupo de intervenção receberão a aplica�
 
 **Plano de ação e Educação:** Sugestões baseadas nas guidelines GINA e módulos informativos sobre asma.
 
-### Instalação e Onboarding
-
-Após confirmação de elegibilidade e assinatura do consentimento informado, os participantes
+**Instalação e Onboarding:** Após confirmação de elegibilidade e assinatura do consentimento informado, os participantes
 do grupo de intervenção receberão, na consulta basal (T0), um código de acesso único para
 download da aplicação RespiRA através da App Store ou Google Play.
 
@@ -139,9 +137,7 @@ questões à equipa antes de sair da consulta.
 
 Será disponibilizado um guia de utilização em papel como suporte adicional.
 
-### Suporte Técnico
-
-Os participantes terão acesso a suporte técnico durante todo o período do estudo:
+**Suporte Técnico:** Os participantes terão acesso a suporte técnico durante todo o período do estudo:
 
 **Linha de apoio telefónico:** disponível de segunda a sexta, das 9h às 17h.
 
