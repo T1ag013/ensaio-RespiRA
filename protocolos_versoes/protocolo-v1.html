@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Grupo 4 - Turma B">
+<meta name="dcterms.date" content="2026-03-06">
+
+<title>RespiRA</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-244ce1b9ec229af56bb6f90d24b3371d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-fixed fullcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">RespiRA</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Início</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../protocolo.html"> 
+<span class="menu-text">Protocolo</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../materiais.html"> 
+<span class="menu-text">Materiais</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../resultados.html"> 
+<span class="menu-text">Resultados</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../equipa.html"> 
+<span class="menu-text">Equipa</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../ia.html"> 
+<span class="menu-text">Declaração de IA</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">RespiRA</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Grupo 4 - Turma B </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">March 6, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="protocolo-de-ensaio-clínico" class="level1">
+<h1>Protocolo de Ensaio Clínico</h1>
+<section id="informação-administrativa" class="level2">
+<h2 class="anchored" data-anchor-id="informação-administrativa">Informação Administrativa</h2>
+<section id="título-do-estudo" class="level3">
+<h3 class="anchored" data-anchor-id="título-do-estudo">Título do Estudo</h3>
+<p>RespiRA: Eficácia de uma Aplicação Móvel de Monitorização e Gestão da Asma Moderada Persistente em Adultos Seguidos nos Cuidados de Saúde Primários : Estudo Piloto Randomizado e Controlado com 12 Semanas de Follow-up</p>
+</section>
+<section id="título-abreviado" class="level3">
+<h3 class="anchored" data-anchor-id="título-abreviado">Título Abreviado</h3>
+<p>RespiRA: App Móvel na Gestão da Asma : Estudo Piloto Randomizado em Cuidados Primários</p>
+</section>
+<section id="autores-e-afiliações" class="level3">
+<h3 class="anchored" data-anchor-id="autores-e-afiliações">Autores e Afiliações</h3>
+<p><strong>Investigadores Principais:</strong> - Gonçalo Cunha, Estudante da Faculdade de Medicina da Universidade do Porto - João Cardoso, Estudante da Faculdade de Medicina da Universidade do Porto - Tiago Sousa, Estudante da Faculdade de Medicina da Universidade do Porto</p>
+<p><strong>Instituição:</strong> Faculdade de Medicina da Universidade do Porto</p>
+<p><strong>Contacto:</strong> Email: up202506406@up.pt</p>
+</section>
+<section id="identificação-do-ensaio" class="level3">
+<h3 class="anchored" data-anchor-id="identificação-do-ensaio">Identificação do Ensaio</h3>
+<p><strong>Tipo de estudo:</strong> Ensaio clínico randomizado, controlado, paralelo</p>
+<p><strong>Data de início prevista:</strong> 06/03/2026</p>
+<p><strong>Data de conclusão prevista:</strong> 06/03/2027</p>
+<hr>
+</section>
+</section>
+<section id="introdução" class="level2">
+<h2 class="anchored" data-anchor-id="introdução">1. Introdução</h2>
+<section id="racional" class="level3">
+<h3 class="anchored" data-anchor-id="racional">1.1 Racional</h3>
+<p>RespiRA : Racional A asma é uma doença respiratória crónica de elevada prevalência a nível mundial, afetando cerca de 300 milhões de pessoas, com impacto significativo na qualidade de vida, produtividade e utilização de recursos de saúde. Em Portugal, estima-se que aproximadamente 10% da população adulta sofra de asma, sendo a asma moderada persistente uma das formas clínicas que maior desafio representa para os cuidados de saúde primários, quer pela necessidade de monitorização contínua, quer pela exigência de adesão terapêutica a longo prazo. Apesar dos avanços terapêuticos disponíveis, um número considerável de doentes mantém um controlo subótimo da doença, frequentemente associado a dificuldades na adesão à medicação, desconhecimento do plano de ação individualizado e ausência de monitorização sistemática dos sintomas entre consultas. Estes fatores contribuem para o aumento do número de exacerbações, de idas ao serviço de urgência e de internamentos evitáveis, com custos humanos e económicos relevantes. A evidência científica recente tem demonstrado o potencial das intervenções baseadas em tecnologias móveis, as chamadas mHealth, na gestão de doenças crónicas. Aplicações móveis direcionadas para a autogestão da asma têm mostrado resultados promissores na melhoria do controlo sintomático, na adesão terapêutica e na literacia em saúde. Contudo, a maioria dos estudos existentes apresenta limitações metodológicas, populações heterogéneas e ausência de validação em contexto de cuidados de saúde primários europeus, designadamente no sistema de saúde português. Neste contexto, identificou-se uma lacuna relevante (gap) na evidência: a escassez de estudos piloto randomizados e controlados que avaliem, de forma rigorosa, a eficácia de aplicações móveis integradas, combinando monitorização de sintomas, registo de débito expiratório máximo, lembretes de medicação e planos de ação personalizados, em adultos com asma moderada persistente seguidos em unidades de saúde familiar (USF) portuguesas. O presente estudo piloto justifica-se, assim, pela necessidade de gerar evidência preliminar sobre a viabilidade e eficácia da app RespiRA neste contexto específico, contribuindo para informar futuras investigações de maior escala e para a potencial integração de ferramentas digitais na prática clínica dos cuidados de saúde primários em Portugal.</p>
+</section>
+<section id="objetivos" class="level3">
+<h3 class="anchored" data-anchor-id="objetivos">1.2 Objetivos</h3>
+<section id="objetivo-primário" class="level4">
+<h4 class="anchored" data-anchor-id="objetivo-primário">Objetivo Primário</h4>
+<p>Avaliar a eficácia da aplicação RespiRA na melhoria do controlo da asma, medida pelo score do Asthma Control Test (ACT) após 12 semanas de intervenção em adultos com asma moderada persistente.</p>
+</section>
+<section id="objetivos-secundários" class="level4">
+<h4 class="anchored" data-anchor-id="objetivos-secundários">Objetivos Secundários</h4>
+<p>Os objetivos secundários deste estudo são:</p>
+<ol type="1">
+<li>Analisar as variações nos valores de pico de fluxo expiratório (peak flow) ao longo do período de intervenção.</li>
+<li>Determinar a frequência de exacerbações asmáticas durante o estudo e sua relação com a utilização da aplicação RespiRA.</li>
+<li>Avaliar a taxa de adesão à medicação prescrita entre os participantes do grupo intervenção em comparação ao grupo controlo.</li>
+<li>Mensurar a qualidade de vida dos pacientes, utilizando o Asthma Quality of Life Questionnaire (AQLQ), antes e após a intervenção com a aplicação RespiRA.</li>
+</ol>
+<hr>
+</section>
+</section>
+</section>
+<section id="métodos" class="level2">
+<h2 class="anchored" data-anchor-id="métodos">2. Métodos</h2>
+<section id="desenho-do-estudo" class="level3">
+<h3 class="anchored" data-anchor-id="desenho-do-estudo">2.1 Desenho do Estudo</h3>
+<p>Este é um ensaio clínico randomizado, controlado, de grupos paralelos.</p>
+<p><strong>Características do desenho:</strong></p>
+<ul>
+<li>Randomização 1:1 (intervenção : controlo)</li>
+<li>Duração: 12 semanas</li>
+<li>Setting: 1 centro de saúde, integrado em uma Unidade de Saúde Familiar (USF), proporcionando um ambiente de cuidados primários para a população-alvo</li>
+<li>Fase: Estudo piloto (pré-teste)</li>
+<li>Tamanho da amostra: 30 participantes (15 por braço)</li>
+</ul>
+<p><strong>Timeline:</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Fase</th>
+<th>Duração</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Recrutamento</td>
+<td>2 semanas</td>
+<td>Identificação e seleção de participantes</td>
+</tr>
+<tr class="even">
+<td>Baseline</td>
+<td>1 dias</td>
+<td>Avaliação inicial e randomização</td>
+</tr>
+<tr class="odd">
+<td>Intervenção</td>
+<td>8 semanas</td>
+<td>Período ativo de intervenção</td>
+</tr>
+<tr class="even">
+<td>Follow-up</td>
+<td>1 semanas</td>
+<td>Avaliações de outcome</td>
+</tr>
+</tbody>
+</table>
+<p>Fluxograma CONSORT <img src="fluxograma.png" class="img-fluid" alt="Fluxograma CONSORT"></p>
+</section>
+<section id="população-do-estudo" class="level3">
+<h3 class="anchored" data-anchor-id="população-do-estudo">2.2 População do Estudo</h3>
+<section id="critérios-de-inclusão" class="level4">
+<h4 class="anchored" data-anchor-id="critérios-de-inclusão">2.2.1 Critérios de Inclusão</h4>
+<p>Serão elegíveis para participação neste estudo indivíduos que cumpram <strong>todos</strong> os seguintes critérios:</p>
+<ol type="1">
+<li>Idade entre 18 e 65 anos à data de recrutamento.</li>
+<li>Diagnóstico de asma moderada persistente confirmado pelos critérios GINA, documentado há pelo menos 6 meses.</li>
+<li>ACT score entre 12 e 19 pontos e peak flow entre 60–80% do valor previsto, sem hospitalização nos 3 meses anteriores.</li>
+<li>Posse e utilização autónoma de smartphone Android (≥8.0) ou iOS (≥13) com acesso a internet.</li>
+<li>Capacidade de ler e compreender informação escrita em português europeu.</li>
+<li>Capacidade para fornecer consentimento informado escrito.</li>
+<li>Disponibilidade para participar durante 12 semanas, com presença nas avaliações às 0, 4, 8 e 12 semanas.</li>
+</ol>
+</section>
+<section id="critérios-de-exclusão" class="level4">
+<h4 class="anchored" data-anchor-id="critérios-de-exclusão">2.2.2 Critérios de Exclusão</h4>
+<p>Serão excluídos do estudo indivíduos que apresentem <strong>qualquer</strong> dos seguintes critérios:</p>
+<ol type="1">
+<li>Diagnóstico de DPOC, fibrose quística ou outra doença respiratória crónica grave que possa confundir os resultados.</li>
+<li>Participação simultânea noutro ensaio clínico ou estudo intervencionista.</li>
+<li>Gravidez confirmada ou amamentação à data de recrutamento</li>
+<li>Incapacidade física ou cognitiva de realizar corretamente a medição de peak flow ou preencher o ACT</li>
+<li>Ausência de smartphone compatível ou sem acesso regular a internet.</li>
+<li>Qualquer condição clínica, psiquiátrica ou social que, na opinião do investigador, comprometa a segurança do participante ou a validade dos dados.</li>
+</ol>
+</section>
+<section id="processo-de-recrutamento" class="level4">
+<h4 class="anchored" data-anchor-id="processo-de-recrutamento">2.2.3 Processo de Recrutamento</h4>
+<p>O recrutamento será realizado na USF/centro de saúde participante, através de duas vias:</p>
+<ul>
+<li>Identificação ativa:o médico de família identifica, na sua lista de utentes, pacientes com diagnóstico de asma moderada persistente registado no processo clínico eletrónico.</li>
+<li>Recrutamento em consulta: durante consultas programadas de vigilância ou de doença crónica, o médico apresenta o estudo a potenciais participantes elegíveis.</li>
+</ul>
+<p>Os candidatos receberão informação escrita sobre o estudo e terão um período mínimo de 48 horas para decidir a sua participação, antes de assinar o consentimento informado. Após confirmação de elegibilidade e consentimento, será realizada a avaliação basal (T0).</p>
+<p>Diagrama de atividade do percurso do participante no estudo <img src="participante.png" class="img-fluid" alt="Diagrama de atividade do participante"></p>
+</section>
+</section>
+<section id="intervenções" class="level3">
+<h3 class="anchored" data-anchor-id="intervenções">2.3 Intervenções</h3>
+<section id="grupo-de-intervenção" class="level4">
+<h4 class="anchored" data-anchor-id="grupo-de-intervenção">2.3.1 Grupo de Intervenção</h4>
+<p>Os participantes randomizados para o grupo de intervenção receberão:</p>
+<p><strong>Aplicação RespiRA:</strong></p>
+<p>Os participantes do grupo de intervenção receberão a aplicação no momento da avaliação basal (T0), acompanhada de uma sessão de formação de aproximadamente 15 minutos com um elemento da equipa de investigação, para garantir a correta utilização de todas as funcionalidades.</p>
+<p>Funcionalidades principais:</p>
+<ol type="1">
+<li><p>Monitorização de sintomas (ACT): Apresenta o questionário ACT com 5 perguntas sobre controlo da asma. O participante responde através de botões na app. Frequência semanal (notificação ao domingo).</p></li>
+<li><p>Registo de peak flow: Permite a introdução manual dos valores, gerando gráficos de evolução e avisos no ecrã caso o valor desça abaixo de sessenta por cento do previsto. Frequência diária, preferencialmente de manhã.</p></li>
+</ol>
+<p>Diagrama de sequência: Registo de peak flow na app <img src="sequencia.png" class="img-fluid" alt="Diagrama de sequência: Registo de peak flow na app"> 3. Lembretes de medicação: - Envia notificações push nos horários definidos para cada medicamento prescrito, com opção de confirmar ou adiar a toma. - O participante configura os medicamentos e horários na primeira utilização, podendo editar a qualquer momento. - Uso diário, de acordo com a prescrição médica. 4. Plano de ação e Educação: Sugestões de ações baseadas nas guidelines GINA e módulos informativos sobre asma.</p>
+<p><strong>Instalação e Onboarding:</strong></p>
+<p>Após confirmação de elegibilidade e assinatura do consentimento informado, os participantes do grupo de intervenção receberão, na consulta basal (T0), um código de acesso único para download da aplicação RespiRA através da App Store ou Google Play.</p>
+<p>O processo de onboarding decorrerá na própria consulta e inclui:</p>
+<ol type="1">
+<li>Instalação assistida: um elemento da equipa de investigação apoia o participante na instalação e criação de conta, garantindo o correto funcionamento no dispositivo pessoal.</li>
+<li>Configuração inicial:introdução dos dados clínicos base (medicação prescrita, horários de toma, valor de peak flow previsto), com apoio do investigador.</li>
+<li>Tutorial guiado: a app apresenta um tutorial interativo de aproximadamente 10 minutos, percorrendo todas as funcionalidades principais com instruções passo a passo.</li>
+<li>Esclarecimento de dúvidas: no final, o participante tem a oportunidade de colocar questões à equipa antes de sair da consulta.</li>
+</ol>
+<p>Será disponibilizado um guia de utilização em papel como suporte adicional. Em caso de dificuldades técnicas após a consulta, os participantes poderão contactar a equipa através de um número de apoio disponível durante o horário laboral.</p>
+<p><strong>Suporte técnico:</strong></p>
+<p>Os participantes terão acesso a suporte técnico durante todo o período do estudo através das seguintes vias:</p>
+<ul>
+<li>Linha de apoio telefónico: disponível de segunda a sexta, das 9h às 17h, para resolução de problemas técnicos ou dúvidas de utilização.</li>
+<li>Email de suporte: para questões não urgentes, com resposta garantida em até 48 horas úteis.</li>
+<li>FAQ integrado na app: secção de perguntas frequentes acessível diretamente na aplicação, cobrindo os problemas técnicos mais comuns.</li>
+</ul>
+<p>Em caso de perda ou substituição de dispositivo, o participante poderá reinstalar a app e recuperar os seus dados através das credenciais de acesso criadas no onboarding.</p>
+<p><strong>Cuidado concomitante:</strong></p>
+<p>Os participantes mantêm o seu cuidado médico habitual, incluindo consultas, medicação, etc. <img src="aplicacao.png" class="img-fluid" alt="Diagrama de atividade do percurso como utilizador da aplicação digital"> <img src="casosdeuso.png" class="img-fluid" alt="Diagrama de casos de uso para as funcionalidades da app do ensaio clínico"></p>
+</section>
+<section id="grupo-controlo" class="level4">
+<h4 class="anchored" data-anchor-id="grupo-controlo">2.3.2 Grupo Controlo</h4>
+<p>Os participantes randomizados para o grupo controlo receberão:</p>
+<p>Os participantes randomizados para o grupo controlo receberão cuidado habitual isolado, sem acesso à aplicação RespiRA. O cuidado habitual inclui consultas médicas programadas, acesso à medicação prescrita (sem alteração do esquema) e material educativo standard do centro de saúde. Após o término do ensaio (12 semanas), será ponderado o acesso à aplicação como medida de equidade.</p>
+</section>
+<section id="critérios-de-descontinuação" class="level4">
+<h4 class="anchored" data-anchor-id="critérios-de-descontinuação">2.3.3 Critérios de Descontinuação</h4>
+<p>Participantes serão retirados do estudo se:</p>
+<ol type="1">
+<li><ul>
+<li>Retirarem o consentimento informado em qualquer momento, sem necessidade de justificação</li>
+</ul></li>
+<li><ul>
+<li>Desenvolverem uma condição clínica que torne a continuação do estudo insegura ou que exija alteração significativa da terapêutica.</li>
+</ul></li>
+<li><ul>
+<li>Ocorrer violação grave do protocolo que comprometa a integridade dos dados recolhidos.</li>
+</ul></li>
+</ol>
+<hr>
+</section>
+</section>
+</section>
+<section id="avaliações-e-outcomes" class="level2">
+<h2 class="anchored" data-anchor-id="avaliações-e-outcomes">3. Avaliações e Outcomes</h2>
+<section id="outcome-primário" class="level3">
+<h3 class="anchored" data-anchor-id="outcome-primário">3.1 Outcome Primário</h3>
+<p>Pontuação do Asthma Control Test (ACT)</p>
+<ul>
+<li><strong>Instrumento:</strong> O Asthma Control Test (ACT) é um questionário validado, auto-administrado, composto por 5 perguntas que avaliam o controlo da asma nas últimas 4 semanas (frequên- cia de sintomas, uso de medicação de alívio e impacto nas atividades diárias). A pontuação varia entre 5 (controlo muito mau) e 25 (controlo total).</li>
+<li><strong>Momento de avaliação:</strong> A avaliação será realizada na linha de base (baseline / semana</li>
+</ul>
+<ol start="0" type="1">
+<li>e nos momentos de follow-up às 4, 8 e 12 semanas. O endpoint primário final corresponde à avaliação às 12 semanas</li>
+</ol>
+<ul>
+<li><strong>Definição de sucesso:</strong> O sucesso da intervenção será definido por uma diferença estatisti- camente significativa na variação da pontuação média do ACT entre o grupo de intervenção e o grupo de controlo às 12 semanas. Do ponto de vista clínico, considerar-se-á sucesso se o grupo de intervenção atingir uma pontuação indicativa de asma controlada (ACT ≥ 20) ou uma diferença mínima clinicamente importante (aumento igual ou superior a 3 pontos face à linha de base).</li>
+</ul>
+</section>
+<section id="outcomes-secundários" class="level3">
+<h3 class="anchored" data-anchor-id="outcomes-secundários">3.2 Outcomes Secundários</h3>
+<ol type="1">
+<li><p><strong>Valores de <em>Peak Flow</em> (Débito Expiratório Máximo - PEF):</strong> Avaliação da média e da variabilidade diária do PEF, registada ao longo das 12 semanas do estudo. <span class="math display">\[Variabilidade = \frac{PEF\_{max} - PEF\_{min}}{\frac{PEF\_{max} + PEF\_{min}}{2}} \times 100\]</span></p></li>
+<li><p><strong>Taxa de Exacerbações:</strong> Número de exacerbações de asma documentadas durante o período de 12 semanas (definidas de acordo com critérios clínicos padronizados, como a necessidade de corticoterapia oral ou agravamento sintomático mantido).</p></li>
+<li><p><strong>Taxa de Adesão à Medicação:</strong> Avaliação da <em>compliance</em> terapêutica (medicação de controlo), medida em percentagem de doses tomadas face às prescritas, avaliada aos 4, 8 e 12 semanas de <em>follow-up</em>.</p></li>
+<li><p><strong>Qualidade de Vida Relacionada com a Asma:</strong> Medida através da pontuação global e dos domínios específicos do questionário validado <em>Asthma Quality of Life Questionnaire</em> (AQLQ), aplicado na linha de base e às 12 semanas.</p></li>
+<li><p><strong>Recurso a Cuidados de Saúde Não Programados:</strong> Número contabilizado de idas ao serviço de urgência ou consultas abertas (não programadas) motivadas por episódios de agravamento da asma durante o decurso do estudo.</p></li>
+<li><p><strong>Satisfação com os Cuidados de Saúde:</strong> Nível de satisfação reportado pelos participantes relativamente ao acompanhamento clínico recebido, avaliado através de um questionário padronizado no final da intervenção (semana 12).</p></li>
+</ol>
+</section>
+</section>
+<section id="análise-estatística" class="level2">
+<h2 class="anchored" data-anchor-id="análise-estatística">4. Análise Estatística</h2>
+<section id="princípios-gerais" class="level4">
+<h4 class="anchored" data-anchor-id="princípios-gerais">4.1 Princípios Gerais</h4>
+<p>Atendendo à natureza de estudo piloto (feasibility/pilot study) com uma amostra de 30 participantes, a análise estatística será essencialmente exploratória e descritiva. O foco principal será a estimação da magnitude do efeito (effect size) e as respetivas margens de erro (intervalos de confiança), que servirão de base para o cálculo da dimensão amostral de um futuro ensaio clínico definitivo. Ainda que testes de hipóteses formais sejam realizados, os valores de p (nível de significância definido em α = 0,05, bicaudal) serão interpretados com cautela. A análise estatística será realizada com recurso ao software IBM SPSS Statistics (versão mais recente) ou R (versão ≥ 4.0).</p>
+</section>
+<section id="análise-do-outcome-primário-e-secundários" class="level4">
+<h4 class="anchored" data-anchor-id="análise-do-outcome-primário-e-secundários">4.2 Análise do Outcome Primário e Secundários</h4>
+<ul>
+<li>A comparação entre os dois grupos (Intervenção vs.&nbsp;Controlo) às 12 semanas será efetuada com recurso ao <strong>Teste t de Student para amostras independentes</strong> (se a distribuição for normal) ou ao <strong>Teste U de Mann-Whitney</strong> (se a distribuição não for normal).</li>
+<li>Para acomodar as medidas repetidas ao longo do tempo (semanas 0, 4, 8 e 12) e lidar adequadamente com os dados omissos, será ajustado um <strong>Modelo Linear de Efeitos Mistos (Linear Mixed-Effects Model - LMM)</strong>, incluindo o tempo, o grupo de alocação e a interação tempo × grupo como efeitos fixos, e o participante como efeito aleatório.</li>
+<li>A <strong>Taxa de Adesão à Medicação</strong> será analisada através do teste Qui-Quadrado de Pearson ou Teste Exato de Fisher. Dados de contagem (ex: número de exacerbações) serão analisados através de modelos de regressão de Poisson.</li>
+</ul>
+</section>
+<section id="população-de-análise" class="level4">
+<h4 class="anchored" data-anchor-id="população-de-análise">4.3 População de Análise</h4>
+<p>A análise primária de eficácia será realizada de acordo com o princípio Intention-to-Treat (ITT), em que todos os participantes randomizados serão analisados nos grupos para os quais foram originalmente alocados. Será realizada uma análise Per-Protocol (PP) de sensibilidade.</p>
+<hr>
+</section>
+<section id="ética-e-disseminação" class="level3">
+<h3 class="anchored" data-anchor-id="ética-e-disseminação">5. Ética e Disseminação</h3>
+<section id="aprovação-ética-e-consentimento" class="level4">
+<h4 class="anchored" data-anchor-id="aprovação-ética-e-consentimento">5.1 Aprovação Ética e Consentimento</h4>
+<p>O protocolo, o documento de consentimento informado e o material informativo serão submetidos para aprovação pela Comissão de Ética para a Saúde (CES) competente. O estudo cumprirá a Declaração de Helsínquia e as Boas Práticas Clínicas (GCP). O consentimento informado, livre e esclarecido, será obtido por escrito para todos os participantes antes de qualquer procedimento do estudo.</p>
+</section>
+<section id="confidencialidade-e-proteção-de-dados" class="level4">
+<h4 class="anchored" data-anchor-id="confidencialidade-e-proteção-de-dados">5.2 Confidencialidade e Proteção de Dados</h4>
+<p>A recolha e armazenamento dos dados respeitarão o Regulamento Geral sobre a Proteção de Dados (RGPD). Será garantida a <strong>pseudonimização</strong> dos participantes (atribuição de código único). Os dados gerados pela app RespiRA serão transmitidos através de protocolos seguros e armazenados em servidores cloud na União Europeia, com encriptação end-to-end.</p>
+</section>
+<section id="disseminação" class="level4">
+<h4 class="anchored" data-anchor-id="disseminação">5.3 Disseminação</h4>
+<p>Os resultados do estudo piloto serão submetidos para publicação em revistas científicas com revisão por pares (*peer-review*) e apresentados em congressos médicos, independentemente da direção dos resultados.</p>
+<hr>
+</section>
+</section>
+<section id="referências-bibliográficas" class="level3">
+<h3 class="anchored" data-anchor-id="referências-bibliográficas">6. Referências Bibliográficas</h3>
+<p>1. <strong>Global Initiative for Asthma (GINA).</strong> Global Strategy for Asthma Management and Prevention. (2023). Disponível em: www.ginasthma.org. 2. <strong>Chan AW, Tetzlaff JM, Altman DG, et al.</strong> SPIRIT 2013 statement: defining standard protocol items for clinical trials. Ann Intern Med. 2013;158(3):200-207. 3. <strong>Eldridge SM, Lancaster GA, Campbell MJ, et al.</strong> Defining feasibility and pilot studies in preparation for randomised controlled trials: development of a conceptual framework. PLoS One. 2016;11(3):e0150205. 4. <strong>Hui CY, Walton R, McKinstry B, Jackson T, Parker R, Pinnock H.</strong> The use of mobile applications to support self-management for people with asthma: a systematic review of controlled studies to identify features associated with clinical effectiveness and adherence. J Am Med Inform Assoc. 2017;24(3):619-632. 5. <strong>Nathan RA, Sorkness CA, Kosinski M, et al.</strong> Development of the asthma control test: a survey for assessing asthma control. J Allergy Clin Immunol. 2004;113(1):59-65. 6. <strong>Juniper EF, Guyatt GH, Epstein RS, Ferrie PJ, Jaeschke R, Hiller TK.</strong> Evaluation of impairment of health related quality of life in asthma: development of a questionnaire for use in clinical trials. Thorax. 1992;47(2):76-83.</p>
+<hr>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/T1ag013\.github\.io\/ensaio-RespiRA\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
