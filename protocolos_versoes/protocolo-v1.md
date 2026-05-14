@@ -10,11 +10,11 @@ date: "2026-03-06"
 
 ### Título do Estudo
 
-RespiRA: Eficácia de uma Aplicação Móvel de Monitorização e Gestão da Asma Moderada Persistente em Adultos Seguidos nos Cuidados de Saúde Primários — Estudo Piloto Randomizado e Controlado com 12 Semanas de Follow-up
+RespiRA: Eficácia de uma Aplicação Móvel de Monitorização e Gestão da Asma Moderada Persistente em Adultos Seguidos nos Cuidados de Saúde Primários : Estudo Piloto Randomizado e Controlado com 12 Semanas de Follow-up
 
 ### Título Abreviado
 
-RespiRA: App Móvel na Gestão da Asma — Estudo Piloto Randomizado em Cuidados Primários
+RespiRA: App Móvel na Gestão da Asma : Estudo Piloto Randomizado em Cuidados Primários
 
 ### Autores e Afiliações
 
@@ -43,11 +43,11 @@ Email: up202506406@up.pt
 
 ### 1.1 Racional
 
-RespiRA — Racional
+RespiRA : Racional
 A asma é uma doença respiratória crónica de elevada prevalência a nível mundial, afetando cerca de 300 milhões de pessoas, com impacto significativo na qualidade de vida, produtividade e utilização de recursos de saúde. Em Portugal, estima-se que aproximadamente 10% da população adulta sofra de asma, sendo a asma moderada persistente uma das formas clínicas que maior desafio representa para os cuidados de saúde primários, quer pela necessidade de monitorização contínua, quer pela exigência de adesão terapêutica a longo prazo.
 Apesar dos avanços terapêuticos disponíveis, um número considerável de doentes mantém um controlo subótimo da doença, frequentemente associado a dificuldades na adesão à medicação, desconhecimento do plano de ação individualizado e ausência de monitorização sistemática dos sintomas entre consultas. Estes fatores contribuem para o aumento do número de exacerbações, de idas ao serviço de urgência e de internamentos evitáveis, com custos humanos e económicos relevantes.
-A evidência científica recente tem demonstrado o potencial das intervenções baseadas em tecnologias móveis — as chamadas mHealth — na gestão de doenças crónicas. Aplicações móveis direcionadas para a autogestão da asma têm mostrado resultados promissores na melhoria do controlo sintomático, na adesão terapêutica e na literacia em saúde. Contudo, a maioria dos estudos existentes apresenta limitações metodológicas, populações heterogéneas e ausência de validação em contexto de cuidados de saúde primários europeus, designadamente no sistema de saúde português.
-Neste contexto, identificou-se uma lacuna relevante (gap) na evidência: a escassez de estudos piloto randomizados e controlados que avaliem, de forma rigorosa, a eficácia de aplicações móveis integradas — combinando monitorização de sintomas, registo de débito expiratório máximo, lembretes de medicação e planos de ação personalizados — em adultos com asma moderada persistente seguidos em unidades de saúde familiar (USF) portuguesas.
+A evidência científica recente tem demonstrado o potencial das intervenções baseadas em tecnologias móveis, as chamadas mHealth, na gestão de doenças crónicas. Aplicações móveis direcionadas para a autogestão da asma têm mostrado resultados promissores na melhoria do controlo sintomático, na adesão terapêutica e na literacia em saúde. Contudo, a maioria dos estudos existentes apresenta limitações metodológicas, populações heterogéneas e ausência de validação em contexto de cuidados de saúde primários europeus, designadamente no sistema de saúde português.
+Neste contexto, identificou-se uma lacuna relevante (gap) na evidência: a escassez de estudos piloto randomizados e controlados que avaliem, de forma rigorosa, a eficácia de aplicações móveis integradas, combinando monitorização de sintomas, registo de débito expiratório máximo, lembretes de medicação e planos de ação personalizados, em adultos com asma moderada persistente seguidos em unidades de saúde familiar (USF) portuguesas.
 O presente estudo piloto justifica-se, assim, pela necessidade de gerar evidência preliminar sobre a viabilidade e eficácia da app RespiRA neste contexto específico, contribuindo para informar futuras investigações de maior escala e para a potencial integração de ferramentas digitais na prática clínica dos cuidados de saúde primários em Portugal.
 
 ### 1.2 Objetivos
