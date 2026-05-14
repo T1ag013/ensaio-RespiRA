@@ -1,5 +1,7 @@
 ---
 title: "Declaração de IA"
+toc: true
+toc-title: "Índice"
 ---
 
 ## Utilização de Inteligência Artificial neste Trabalho
@@ -36,6 +38,7 @@ secundários no Peak Flow, exacerbações, adesão e qualidade de vida."
 7. Análise estatística: "Escreve a secção de Análise Estatística para o protocolo do estudo
 piloto RespiRA (n=30)."
 8. Ética: "Redige a secção final de Ética e Disseminação para o protocolo do estudo RespiRA."
+9. Auxílio na conversão do formato markdown para latex.
 
 **Revisão humana:** Cada secção foi analisada criticamente. O racional foi ajustado para
 alinhar com as guidelines GINA 2023. Os critérios de elegibilidade foram expandidos por

@@ -1,5 +1,7 @@
 ---
 title: "Equipa"
+toc: true
+toc-title: "Índice"
 ---
 
 ## Investigadores Principais

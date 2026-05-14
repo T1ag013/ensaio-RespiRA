@@ -1,5 +1,7 @@
 ---
 title: "Resultados"
+toc: true
+toc-title: "Índice"
 ---
 
 ```{r}
