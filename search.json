@@ -112,6 +112,13 @@
     "text": "eCRF RespiRA (PDF)\nDicionário de Dados (CSV)"
   },
   {
+    "objectID": "materiais.html#relatório-da-entrega-2",
+    "href": "materiais.html#relatório-da-entrega-2",
+    "title": "Materiais",
+    "section": "Relatório da Entrega 2",
+    "text": "Relatório da Entrega 2\nO relatório completo da Entrega 2, incluindo a descrição do eCRF, decisões de implementação no REDCap e limitações identificadas, está disponível para download:\nRelatório E2 (PDF)"
+  },
+  {
     "objectID": "materiais.html#instrumentos-de-recolha-de-dados",
     "href": "materiais.html#instrumentos-de-recolha-de-dados",
     "title": "Materiais",
@@ -159,13 +166,6 @@
     "title": "Materiais",
     "section": "Protótipo da Aplicação RespiRA",
     "text": "Protótipo da Aplicação RespiRA\nO protótipo interativo da aplicação RespiRA foi desenvolvido no Figma e pode ser consultado através do link abaixo:\nProtótipo Figma da App RespiRA\n\n\n\nInterface de login da App RespiRA"
-  },
-  {
-    "objectID": "materiais.html#relatório-da-entrega-2",
-    "href": "materiais.html#relatório-da-entrega-2",
-    "title": "Materiais",
-    "section": "Relatório da Entrega 2",
-    "text": "Relatório da Entrega 2\nO relatório completo da Entrega 2, incluindo a descrição do eCRF, decisões de implementação no REDCap e limitações identificadas, está disponível para download:\nRelatório E2 (PDF)"
   },
   {
     "objectID": "equipa.html",
