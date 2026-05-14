@@ -92,3 +92,23 @@ recomendação a outros doentes.
 
 **Satisfação Geral com os Cuidados** (ambos os grupos): avalia a satisfação com os
 cuidados recebidos na USF/centro de saúde.
+
+## Protótipo da Aplicação RespiRA
+
+O protótipo interativo da aplicação RespiRA foi desenvolvido no Figma e pode ser
+consultado através do link abaixo:
+
+[Protótipo Figma da App RespiRA](https://www.figma.com/proto/vb7pMV9MP5gJiWyRjz5NB5/App-RespiRA?node-id=5-25&t=UQn8K596IYwuxoI2-1)
+
+![Interface de login da App RespiRA](images/prototipo.jpeg)
+
+---
+
+## Relatório da Entrega 2
+
+O relatório completo da Entrega 2, incluindo a descrição do eCRF, decisões de
+implementação no REDCap e limitações identificadas, está disponível para download:
+
+[Relatório E2 (PDF)](files/relatorioFP_entrega2__1_.pdf)
+
+---
